@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98027B2C2BA1A2F4001A8978 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98027B2B2BA1A2F3001A8978 /* HomeView.swift */; };
+		98027B342BA1A326001A8978 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98027B332BA1A326001A8978 /* ResultView.swift */; };
+		98027B442BA1A378001A8978 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 98027B3F2BA1A377001A8978 /* Pretendard-ExtraLight.otf */; };
+		98027B452BA1A378001A8978 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 98027B402BA1A378001A8978 /* Pretendard-Black.otf */; };
+		98027B462BA1A378001A8978 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 98027B412BA1A378001A8978 /* Pretendard-SemiBold.otf */; };
+		98027B472BA1A378001A8978 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 98027B422BA1A378001A8978 /* Pretendard-Thin.otf */; };
+		98027B482BA1A378001A8978 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 98027B432BA1A378001A8978 /* Pretendard-ExtraBold.otf */; };
 		ED7F36B42BA17C1B00D32683 /* UNIV_4cutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F36B32BA17C1B00D32683 /* UNIV_4cutApp.swift */; };
 		ED7F36B62BA17C1B00D32683 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F36B52BA17C1B00D32683 /* ContentView.swift */; };
 		ED7F36B82BA17C1C00D32683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED7F36B72BA17C1C00D32683 /* Assets.xcassets */; };
@@ -14,6 +21,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		98027B212BA1A2C0001A8978 /* .keep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
+		98027B252BA1A2D7001A8978 /* .keep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
+		98027B2B2BA1A2F3001A8978 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		98027B2D2BA1A30B001A8978 /* .keep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
+		98027B2F2BA1A311001A8978 /* .keep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
+		98027B332BA1A326001A8978 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		98027B372BA1A340001A8978 /* .keep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
+		98027B392BA1A345001A8978 /* .keep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
+		98027B3B2BA1A351001A8978 /* .keep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
+		98027B3F2BA1A377001A8978 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		98027B402BA1A378001A8978 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		98027B412BA1A378001A8978 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		98027B422BA1A378001A8978 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		98027B432BA1A378001A8978 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
 		ED7F36B02BA17C1B00D32683 /* UNIV-4cut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UNIV-4cut.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7F36B32BA17C1B00D32683 /* UNIV_4cutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNIV_4cutApp.swift; sourceTree = "<group>"; };
 		ED7F36B52BA17C1B00D32683 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +53,137 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		98027B1E2BA1A298001A8978 /* SupprotFiles */ = {
+			isa = PBXGroup;
+			children = (
+				98027B3B2BA1A351001A8978 /* .keep */,
+			);
+			path = SupprotFiles;
+			sourceTree = "<group>";
+		};
+		98027B1F2BA1A2A8001A8978 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				98027B242BA1A2C9001A8978 /* Utilities */,
+				98027B232BA1A2C4001A8978 /* Features */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		98027B202BA1A2AB001A8978 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				98027B212BA1A2C0001A8978 /* .keep */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		98027B232BA1A2C4001A8978 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				98027B312BA1A315001A8978 /* Result */,
+				98027B272BA1A2DB001A8978 /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		98027B242BA1A2C9001A8978 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				98027B252BA1A2D7001A8978 /* .keep */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		98027B272BA1A2DB001A8978 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				98027B2A2BA1A2E7001A8978 /* ViewModels */,
+				98027B292BA1A2E3001A8978 /* Views */,
+				98027B282BA1A2DE001A8978 /* Models */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		98027B282BA1A2DE001A8978 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				98027B2D2BA1A30B001A8978 /* .keep */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		98027B292BA1A2E3001A8978 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				98027B2B2BA1A2F3001A8978 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		98027B2A2BA1A2E7001A8978 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				98027B2F2BA1A311001A8978 /* .keep */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		98027B312BA1A315001A8978 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				98027B362BA1A334001A8978 /* ViewModels */,
+				98027B352BA1A330001A8978 /* Models */,
+				98027B322BA1A31B001A8978 /* Views */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		98027B322BA1A31B001A8978 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				98027B332BA1A326001A8978 /* ResultView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		98027B352BA1A330001A8978 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				98027B372BA1A340001A8978 /* .keep */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		98027B362BA1A334001A8978 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				98027B392BA1A345001A8978 /* .keep */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		98027B3D2BA1A365001A8978 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				98027B3E2BA1A36D001A8978 /* Fonts */,
+				ED7F36B72BA17C1C00D32683 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		98027B3E2BA1A36D001A8978 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				98027B402BA1A378001A8978 /* Pretendard-Black.otf */,
+				98027B432BA1A378001A8978 /* Pretendard-ExtraBold.otf */,
+				98027B3F2BA1A377001A8978 /* Pretendard-ExtraLight.otf */,
+				98027B412BA1A378001A8978 /* Pretendard-SemiBold.otf */,
+				98027B422BA1A378001A8978 /* Pretendard-Thin.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		ED7F36A72BA17C1B00D32683 = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +203,12 @@
 		ED7F36B22BA17C1B00D32683 /* UNIV-4cut */ = {
 			isa = PBXGroup;
 			children = (
+				98027B3D2BA1A365001A8978 /* Resources */,
+				98027B202BA1A2AB001A8978 /* Config */,
+				98027B1F2BA1A2A8001A8978 /* Code */,
+				98027B1E2BA1A298001A8978 /* SupprotFiles */,
 				ED7F36B32BA17C1B00D32683 /* UNIV_4cutApp.swift */,
 				ED7F36B52BA17C1B00D32683 /* ContentView.swift */,
-				ED7F36B72BA17C1C00D32683 /* Assets.xcassets */,
 				ED7F36B92BA17C1C00D32683 /* Preview Content */,
 			);
 			path = "UNIV-4cut";
@@ -125,7 +280,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98027B482BA1A378001A8978 /* Pretendard-ExtraBold.otf in Resources */,
+				98027B442BA1A378001A8978 /* Pretendard-ExtraLight.otf in Resources */,
+				98027B462BA1A378001A8978 /* Pretendard-SemiBold.otf in Resources */,
+				98027B452BA1A378001A8978 /* Pretendard-Black.otf in Resources */,
 				ED7F36BB2BA17C1C00D32683 /* Preview Assets.xcassets in Resources */,
+				98027B472BA1A378001A8978 /* Pretendard-Thin.otf in Resources */,
 				ED7F36B82BA17C1C00D32683 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +297,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98027B2C2BA1A2F4001A8978 /* HomeView.swift in Sources */,
+				98027B342BA1A326001A8978 /* ResultView.swift in Sources */,
 				ED7F36B62BA17C1B00D32683 /* ContentView.swift in Sources */,
 				ED7F36B42BA17C1B00D32683 /* UNIV_4cutApp.swift in Sources */,
 			);
