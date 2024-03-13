@@ -14,6 +14,10 @@
 		98027B462BA1A378001A8978 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 98027B412BA1A378001A8978 /* Pretendard-SemiBold.otf */; };
 		98027B472BA1A378001A8978 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 98027B422BA1A378001A8978 /* Pretendard-Thin.otf */; };
 		98027B482BA1A378001A8978 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 98027B432BA1A378001A8978 /* Pretendard-ExtraBold.otf */; };
+		9823DBE82BA1AA58007885C4 /* TakePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9823DBE72BA1AA58007885C4 /* TakePhotoView.swift */; };
+		9823DBEC2BA1AAE7007885C4 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9823DBEB2BA1AAE7007885C4 /* OnboardingView.swift */; };
+		9823DBEF2BA1ACE4007885C4 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9823DBEE2BA1ACE4007885C4 /* CameraViewModel.swift */; };
+		9823DBF12BA1AD11007885C4 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9823DBF02BA1AD11007885C4 /* CustomCameraView.swift */; };
 		ED7F36B42BA17C1B00D32683 /* UNIV_4cutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F36B32BA17C1B00D32683 /* UNIV_4cutApp.swift */; };
 		ED7F36B62BA17C1B00D32683 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F36B52BA17C1B00D32683 /* ContentView.swift */; };
 		ED7F36B82BA17C1C00D32683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED7F36B72BA17C1C00D32683 /* Assets.xcassets */; };
@@ -35,6 +39,10 @@
 		98027B412BA1A378001A8978 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		98027B422BA1A378001A8978 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
 		98027B432BA1A378001A8978 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		9823DBE72BA1AA58007885C4 /* TakePhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoView.swift; sourceTree = "<group>"; };
+		9823DBEB2BA1AAE7007885C4 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		9823DBEE2BA1ACE4007885C4 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		9823DBF02BA1AD11007885C4 /* CustomCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
 		ED7F36B02BA17C1B00D32683 /* UNIV-4cut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UNIV-4cut.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7F36B32BA17C1B00D32683 /* UNIV_4cutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNIV_4cutApp.swift; sourceTree = "<group>"; };
 		ED7F36B52BA17C1B00D32683 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +89,8 @@
 		98027B232BA1A2C4001A8978 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				9823DBE92BA1AAD5007885C4 /* Onboarding */,
+				9823DBE32BA1AA33007885C4 /* TakePhoto */,
 				98027B312BA1A315001A8978 /* Result */,
 				98027B272BA1A2DB001A8978 /* Home */,
 			);
@@ -182,6 +192,48 @@
 				98027B422BA1A378001A8978 /* Pretendard-Thin.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		9823DBE32BA1AA33007885C4 /* TakePhoto */ = {
+			isa = PBXGroup;
+			children = (
+				9823DBED2BA1ACC9007885C4 /* ViewModels */,
+				9823DBE42BA1AA38007885C4 /* Views */,
+			);
+			path = TakePhoto;
+			sourceTree = "<group>";
+		};
+		9823DBE42BA1AA38007885C4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9823DBF02BA1AD11007885C4 /* CustomCameraView.swift */,
+				9823DBE72BA1AA58007885C4 /* TakePhotoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9823DBE92BA1AAD5007885C4 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				9823DBEA2BA1AADC007885C4 /* Views */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		9823DBEA2BA1AADC007885C4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9823DBEB2BA1AAE7007885C4 /* OnboardingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9823DBED2BA1ACC9007885C4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9823DBEE2BA1ACE4007885C4 /* CameraViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		ED7F36A72BA17C1B00D32683 = {
@@ -300,7 +352,11 @@
 				98027B2C2BA1A2F4001A8978 /* HomeView.swift in Sources */,
 				98027B342BA1A326001A8978 /* ResultView.swift in Sources */,
 				ED7F36B62BA17C1B00D32683 /* ContentView.swift in Sources */,
+				9823DBEC2BA1AAE7007885C4 /* OnboardingView.swift in Sources */,
+				9823DBEF2BA1ACE4007885C4 /* CameraViewModel.swift in Sources */,
+				9823DBE82BA1AA58007885C4 /* TakePhotoView.swift in Sources */,
 				ED7F36B42BA17C1B00D32683 /* UNIV_4cutApp.swift in Sources */,
+				9823DBF12BA1AD11007885C4 /* CustomCameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,14 +490,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UNIV-4cut/Preview Content\"";
-				DEVELOPMENT_TEAM = WJKNV9KXF2;
+				DEVELOPMENT_TEAM = Y2M459JK4X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 사용을 허용하시겠습니까?";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진을 허용하시겠습니까?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,14 +522,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UNIV-4cut/Preview Content\"";
-				DEVELOPMENT_TEAM = WJKNV9KXF2;
+				DEVELOPMENT_TEAM = Y2M459JK4X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 사용을 허용하시겠습니까?";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진을 허용하시겠습니까?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
