@@ -3,7 +3,7 @@ import SwiftUI
 struct TakePhotoView: View {
     @StateObject var cameraViewModel = CameraViewModel()
     @State private var isPresentingResultView = false
-
+    
     var body: some View {
         ZStack {
             // 카메라 뷰를 배경으로 설정
@@ -22,17 +22,11 @@ struct TakePhotoView: View {
                 if cameraViewModel.remainingTime > 0 {
                     Text("남은 시간: \(cameraViewModel.remainingTime)초")
                         .font(.title)
-                        .foregroundColor(.white)
                         .padding()
-                        .background(Color.black.opacity(0.5))
-                        .cornerRadius(10)
                 } else {
                     Text("사진 촬영 중...")
                         .font(.title)
-                        .foregroundColor(.white)
                         .padding()
-                        .background(Color.black.opacity(0.5))
-                        .cornerRadius(10)
                 }
             }
         }
@@ -41,12 +35,17 @@ struct TakePhotoView: View {
         }
         .fullScreenCover(isPresented: $isPresentingResultView) {
             // ResultView에 mergedImage가 nil인 경우에 대한 처리를 추가합니다.
-                ResultView(mergedImage: cameraViewModel.mergedImage ?? UIImage())
+            if let exampleImage = UIImage(named: "4cut_example") {
+                ResultView(mergedImage: cameraViewModel.mergedImage ?? exampleImage)
+            } else {
+                ResultView(mergedImage: UIImage())
+            }
+            
         }
         .onChange(of: cameraViewModel.mergedImage) { _ in
             // mergedImage의 상태 변화가 감지되면, isPresentingResultView를 true로 설정하여 sheet를 표시합니다.
-            isPresentingResultView = true // 항상 true로 설정합니다.
-
+            print(cameraViewModel.mergedImage)
+            isPresentingResultView = cameraViewModel.mergedImage != nil
         }
     }
 }
