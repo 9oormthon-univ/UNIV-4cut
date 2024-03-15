@@ -1,18 +1,25 @@
-//
-//  IconTextComponent.swift
-//  UNIV-4cut
-//
-//  Created by 서희찬 on 3/16/24.
-//
-
 import SwiftUI
 
 struct IconTextComponent: View {
+    var iconName: String
+    var text: String
+    var textColor: Color = .black
+    var iconColor: Color = .black
+    var textSize: CGFloat = 20
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(systemName: iconName) 
+                .aspectRatio(contentMode: .fit)
+                .foregroundColor(iconColor) // 아이콘 색상
+            Text(text)
+                .font(.custom("Pretendard-SemiBold", size: textSize))
+                .foregroundColor(textColor) // 텍스트 색상
+        }
     }
 }
 
+
 #Preview {
-    IconTextComponent()
+    IconTextComponent(iconName: "cloud", text: "하이")
 }
