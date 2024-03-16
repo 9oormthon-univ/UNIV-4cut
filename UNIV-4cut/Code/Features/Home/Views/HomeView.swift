@@ -1,27 +1,30 @@
 import SwiftUI
 
+
 struct HomeView: View {
+    
     var body: some View {
         NavigationView {
             VStack {
-                Text("유니브 네컷")
-                    .font(.largeTitle)
-                    .padding()
+                Spacer()
                 Image("logo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 300, height: 300)
+                Spacer()
                 // 촬영하기 버튼
                 NavigationLink(destination: OnboardingView()) {
                     Text("촬영하기")
                         .foregroundColor(.white)
                         .frame(width: 200, height: 50)
-                        .background(Color.blue)
+                        .background(Color.black)
                         .cornerRadius(10)
                 }
                 .padding()
+                
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

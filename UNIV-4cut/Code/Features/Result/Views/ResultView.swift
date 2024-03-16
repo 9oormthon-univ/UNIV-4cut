@@ -1,30 +1,142 @@
 import SwiftUI
 
 struct ResultView: View {
+    @StateObject private var viewModel = ResultViewModel()
     let mergedImage: UIImage
     
+    
+    @State private var showingTakePhotoView = false
+    @State private var showingQRView = false
+    @State private var showingHomeView = false
+    
+    let processor = ImageProcessor()
     var body: some View {
-        ZStack{
-            VStack{
-                Image(uiImage: mergedImage)
-                  .resizable()
-                  .aspectRatio(contentMode: .fit)
-                  .frame(width: UIScreen.main.bounds.width * 0.1, height: UIScreen.main.bounds.height * 0.1)
-                  .navigationBarHidden(true)
-
+        VStack{
+            Spacer(minLength: 30)
+            GeometryReader { geometry in
+                
+                ZStack {
+                    Image(uiImage: mergedImage)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .padding(.bottom, 180.0)
+                        .frame(width: geometry.size.width, height: geometry.size.height-255    )
+                        .navigationBarHidden(true)
+                    
+                    // 프레임 이미지 로딩을 개선합니다.
+                    if let frameImage = UIImage(named: "4cut_frame") {
+                        Image(uiImage: frameImage)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: geometry.size.width, height: geometry.size.height-200)
+                            .navigationBarHidden(true)
+                        
+                    } else {
+                        Text("프레임 이미지를 불러올 수 없습니다.")
+                            .foregroundColor(.red)
+                            .navigationBarHidden(true)
+                    }
+                }
+                
+                VStack(alignment: .center){
+                    Spacer()
+                    
+                    HStack(alignment: .center){
+                        Spacer()
+                        if viewModel.isFirst {
+                            Button("다시 찍기") {
+                                showingTakePhotoView=true
+                                //                                                       viewModel.retakeProcess() // isFirst 상태 업데이트
+                            }
+                            .foregroundColor(.white)
+                            .frame(width: 140, height: 50)
+                            .background(Color.black)
+                            .cornerRadius(10)
+                            .fullScreenCover(isPresented: $showingTakePhotoView) {
+                                TakePhotoView()
+                            }
+                        }
+                        Button("홈으로") {
+                            showingHomeView = true
+                        }
+                        .foregroundColor(.white)
+                        .frame(width: 140, height: 50)
+                        .background(Color.black)
+                        .cornerRadius(10)
+                        .fullScreenCover(isPresented: $showingHomeView) {
+                            HomeView()
+                        }
+                        
+                        Button("QR코드 생성") {
+                            showingQRView = true
+                            
+                            // 이미지 합치기
+                            if  let frameMergedImage = processor.mergeImage(image: mergedImage) {
+                                // 이제 frameMergedImage를 사용할 수 있습니다.
+                                viewModel.uploadImageAndGenerateQRCode(image: frameMergedImage)
+                            } else {
+                                print("이미지 합치기에 실패했습니다.")
+                            }
+                        }
+                        .foregroundColor(.white)
+                        .frame(width: 140, height: 50)
+                        .background(Color.black)
+                        .cornerRadius(10)
+                        .sheet(isPresented: $showingQRView) {
+                            if let qrImage = viewModel.qrCodeImage {
+                                VStack{
+                                    Spacer()
+                                    // 이미지
+                                    Text("사진은 3시간뒤에 만료됩니다! 꼭 바로 다운받아주세요")
+                                        .font(.custom("Pretendard-SemiBold", size: 20))
+                                    Spacer()
+                                    Image(uiImage: qrImage)
+                                        .resizable()
+                                        .interpolation(.none)
+                                        .scaledToFit()
+                                        .scaleEffect(0.6) // 이미지 크기를 80%로 줄임
+                                    Spacer()
+                                    Button("홈으로") {
+                                        showingHomeView = true
+                                    }
+                                    .foregroundColor(.white)
+                                    .frame(width: 140, height: 50)
+                                    .background(Color.black)
+                                    .cornerRadius(10)
+                                    .padding(.bottom,30)
+                                    .fullScreenCover(isPresented: $showingHomeView) {
+                                        HomeView()
+                                    }
+                                }
+                            } else {
+                                Text("QR 코드 생성 중...")
+                                    .font(.custom("Pretendard-SemiBold", size: 20))
+                            }
+                        }
+                        .padding(.horizontal)
+                        Spacer()
+                    }
+                    .padding(.bottom, 20.0)
+                }
+                
+                
             }
-            Image(uiImage: UIImage(named:"4cut_frame")!)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .navigationBarHidden(true)
+            .padding(.all)
+            .edgesIgnoringSafeArea(.all)
+            
             
         }
-   
+        
+        
     }
 }
 
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {
-        ResultView(mergedImage: UIImage(named: "4cut_example")!) // 적절한 이미지로 교체
+        if let exampleImage = UIImage(named: "4cut_example") {
+            ResultView(mergedImage: exampleImage)
+        } else {
+            ResultView(mergedImage: UIImage())
+        }
     }
 }
