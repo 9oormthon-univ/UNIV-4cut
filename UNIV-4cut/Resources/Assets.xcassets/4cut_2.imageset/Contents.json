@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "프레임_-removebg-preview.png",
+      "filename" : "4cut_2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "4cut_2@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "4cut_2@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
