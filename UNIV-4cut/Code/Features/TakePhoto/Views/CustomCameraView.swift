@@ -66,6 +66,7 @@ struct CustomCameraView: UIViewRepresentable {
             // 캡처된 사진의 데이터를 UIImage로 변환합니다.
             guard let imageData = photo.fileDataRepresentation(), let image = UIImage(data: imageData) else { return }
             
+            
             DispatchQueue.main.async {
                 // 캡처 카운트를 체크하여 4미만인 경우에만 이미지를 추가합니다.
                 guard self.viewModel.captureCount < 4 else {
@@ -76,8 +77,10 @@ struct CustomCameraView: UIViewRepresentable {
                     return
                 }
                 
-                // 캡처된 이미지를 배열에 추가하고, 캡처 카운트를 증가시킵니다.
-                self.viewModel.capturedImages.append(image)
+                // 캡처된 이미지를 좌우 반전시킨 후 배열에 추가합니다.
+                      if let flippedImage = image.withHorizontallyFlippedOrientation() {
+                          self.viewModel.capturedImages.append(flippedImage)
+                      }
                 self.viewModel.captureCount += 1
                 
                 // 4장의 이미지가 모두 캡처되었는지 다시 확인하고, 모두 캡처되었다면 이미지를 합치는 작업을 진행합니다.
@@ -89,3 +92,11 @@ struct CustomCameraView: UIViewRepresentable {
 
     }
 }
+extension UIImage {
+    // UIImage를 좌우 반전시키는 함수
+    func withHorizontallyFlippedOrientation() -> UIImage? {
+        guard let cgImage = self.cgImage else { return nil }
+        return UIImage(cgImage: cgImage, scale: self.scale, orientation: .leftMirrored)
+    }
+}
+
