@@ -122,11 +122,20 @@ struct ResultView: View {
                             showingQRView = true
                             
                             // 이미지 합치기
-                            if  let frameMergedImage = processor.mergeImage(image: mergedImage) {
-                                // 이제 frameMergedImage를 사용할 수 있습니다.
-                                viewModel.uploadImageAndGenerateQRCode(image: frameMergedImage)
+                            
+                            
+                            // 프레임 이미지 로딩을 개선합니다.
+                            if let frameImage = UIImage(named: "4cut_\(selectedFrameIndex + 1)") {
+                                if  let frameMergedImage = processor.mergeImage(image: mergedImage, frameImage: frameImage) {
+                                    // 프레임 이미지도 넘기기
+                                    viewModel.uploadImageAndGenerateQRCode(image: frameMergedImage)
+                                } else {
+                                    print("이미지 합치기에 실패했습니다.")
+                                }
+                                
                             } else {
-                                print("이미지 합치기에 실패했습니다.")
+                                Text("프레임 이미지를 불러올 수 없습니다.")
+                                    .foregroundColor(.red)
                             }
                         }
                         .font(.system(size: 18, weight: .bold))
@@ -149,7 +158,11 @@ struct ResultView: View {
                                         .scaleEffect(0.6) // 이미지 크기를 80%로 줄임
                                     Spacer()
                                     Button("홈으로") {
-                                        showingHomeView = true
+                                        showingQRView = false
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                            // 약간의 지연 후 홈 뷰로 이동 상태를 활성화
+                                            showingHomeView = true
+                                        }
                                     }
                                     .foregroundColor(.white)
                                     .frame(width: 140, height: 50)
