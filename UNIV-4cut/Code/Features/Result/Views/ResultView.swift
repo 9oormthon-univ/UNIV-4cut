@@ -8,6 +8,7 @@ struct ResultView: View {
     @State private var showingTakePhotoView = false
     @State private var showingQRView = false
     @State private var showingHomeView = false
+    @State private var selectedFrameIndex = 0
     
     let processor = ImageProcessor()
     var body: some View {
@@ -24,7 +25,7 @@ struct ResultView: View {
                         .navigationBarHidden(true)
                     
                     // 프레임 이미지 로딩을 개선합니다.
-                    if let frameImage = UIImage(named: "4cut_frame") {
+                    if let frameImage = UIImage(named: "4cut_\(selectedFrameIndex + 1)") {
                         Image(uiImage: frameImage)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
@@ -41,24 +42,74 @@ struct ResultView: View {
                 VStack(alignment: .center){
                     Spacer()
                     
+                    HStack(alignment: .center, spacing: 30){
+                        Circle()
+                            .frame(width: 60, height: 60)
+                            .foregroundColor(.skyBlueUniv)
+                            .overlay(
+                                    Circle()
+                                        .stroke(selectedFrameIndex == 0 ? .grayUniv : Color.clear, lineWidth: 3)
+                                )
+                            .onTapGesture {
+                                selectedFrameIndex = 0
+                            }
+                        Circle()
+                            .frame(width: 60, height: 60)
+                            .foregroundColor(.mintUniv)
+                            .overlay(
+                                    Circle()
+                                        .stroke(selectedFrameIndex == 1 ? .grayUniv : Color.clear, lineWidth: 3)
+                                )
+                            .onTapGesture {
+                                selectedFrameIndex = 1
+                            }
+                        Circle()
+                            .frame(width: 60, height: 60)
+                            .foregroundColor(.black)
+                            .overlay(
+                                    Circle()
+                                        .stroke(selectedFrameIndex == 2 ? .grayUniv : Color.clear, lineWidth: 3)
+                                )
+                            .onTapGesture {
+                                selectedFrameIndex = 2
+                            }
+                        Circle()
+                            .frame(width: 60, height: 60)
+                            .foregroundColor(.white)
+                            .overlay(
+                                    Circle()
+                                        .stroke(.lightGrayUniv, lineWidth: 3)
+                                )
+                            .overlay(
+                                    Circle()
+                                        .stroke(selectedFrameIndex == 3 ? .grayUniv : Color.clear, lineWidth: 3)
+                                )
+                            .onTapGesture {
+                                selectedFrameIndex = 3
+                            }
+                    }
+                    .padding(.bottom, 30.0)
+                    
+                    
                     HStack(alignment: .center){
                         Spacer()
                         if viewModel.isFirst {
-                            Button("다시 찍기") {
-                                showingTakePhotoView=true
-                                //                                                       viewModel.retakeProcess() // isFirst 상태 업데이트
-                            }
-                            .foregroundColor(.white)
-                            .frame(width: 140, height: 50)
-                            .background(Color.black)
-                            .cornerRadius(10)
-                            .fullScreenCover(isPresented: $showingTakePhotoView) {
-                                TakePhotoView()
-                            }
+//                            Button("다시 찍기") {
+//                                showingTakePhotoView=true
+//                                //                                                       viewModel.retakeProcess() // isFirst 상태 업데이트
+//                            }
+//                            .foregroundColor(.white)
+//                            .frame(width: 140, height: 50)
+//                            .background(Color.black)
+//                            .cornerRadius(10)
+//                            .fullScreenCover(isPresented: $showingTakePhotoView) {
+//                                TakePhotoView()
+//                            }
                         }
                         Button("홈으로") {
                             showingHomeView = true
                         }
+                        .font(.system(size: 18, weight: .bold))
                         .foregroundColor(.white)
                         .frame(width: 140, height: 50)
                         .background(Color.black)
@@ -78,6 +129,7 @@ struct ResultView: View {
                                 print("이미지 합치기에 실패했습니다.")
                             }
                         }
+                        .font(.system(size: 18, weight: .bold))
                         .foregroundColor(.white)
                         .frame(width: 140, height: 50)
                         .background(Color.black)
@@ -113,7 +165,7 @@ struct ResultView: View {
                                     .font(.custom("Pretendard-SemiBold", size: 20))
                             }
                         }
-                        .padding(.horizontal)
+                        //.padding(.horizontal)
                         Spacer()
                     }
                     .padding(.bottom, 20.0)
