@@ -10,7 +10,7 @@ struct HomeView: View {
                 Image("logo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 300, height: 300)
+                    .frame(width: 400, height: 400)
                 Spacer()
                 // 촬영하기 버튼
                 NavigationLink(destination: OnboardingView()) {

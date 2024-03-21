@@ -4,12 +4,19 @@ import AVFoundation
 struct CustomCameraView: UIViewRepresentable {
     @ObservedObject var viewModel: CameraViewModel
 
+//    func makeUIView(context: Context) -> UIView {
+//        let coordinator = context.coordinator
+//        viewModel.captureAction = coordinator.takePicture
+//        let view = UIView()
+//        view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 40)
+//        context.coordinator.setupCameraSession()
+//        return view
+//    }
     func makeUIView(context: Context) -> UIView {
         let coordinator = context.coordinator
         viewModel.captureAction = coordinator.takePicture
-        let view = UIView()
-        view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 40)
-        context.coordinator.setupCameraSession()
+        let view = UIView(frame: UIScreen.main.bounds)
+        context.coordinator.setupCameraSession(for: view) // 뷰를 인자로 전달
         return view
     }
 
@@ -27,10 +34,10 @@ struct CustomCameraView: UIViewRepresentable {
         init(viewModel: CameraViewModel) {
             self.viewModel = viewModel
             super.init()
-            setupCameraSession()
+//            setupCameraSession()
         }
 
-        func setupCameraSession() {
+        func setupCameraSession(for view: UIView) {
             captureSession.sessionPreset = .photo
 
             guard let videoCaptureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front),
@@ -45,14 +52,19 @@ struct CustomCameraView: UIViewRepresentable {
                 captureSession.addOutput(photoOutput)
             }
 
-            DispatchQueue.main.async {
-                if let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) {
-                    let previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
-                    previewLayer.frame = CGRect(x: 0, y: 0, width: window.bounds.width, height: window.bounds.height * (4/5))
-                    previewLayer.videoGravity = .resizeAspectFill
-                    window.layer.addSublayer(previewLayer)
-                }
-            }
+//            DispatchQueue.main.async {
+//                if let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) {
+//                    let previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
+//                    previewLayer.frame = CGRect(x: 0, y: 0, width: window.bounds.width, height: window.bounds.height * (5/6))
+//                    previewLayer.videoGravity = .resizeAspectFill
+//                    window.layer.addSublayer(previewLayer)
+//                }
+//            }
+            let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+               previewLayer.frame = view.bounds // view의 bounds 사용
+               previewLayer.videoGravity = .resizeAspectFill
+               view.layer.addSublayer(previewLayer) // UIView의 layer에 추가
+            
             captureSession.startRunning()
         }
 
