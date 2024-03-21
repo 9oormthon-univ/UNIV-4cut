@@ -29,6 +29,8 @@ struct TakePhotoView: View {
                         .padding()
                 }
             }
+            .foregroundColor(.white)
+
         }
         .onAppear {
             cameraViewModel.startCapturing()

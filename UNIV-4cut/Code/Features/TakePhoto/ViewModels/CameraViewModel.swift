@@ -17,7 +17,7 @@ class CameraViewModel: ObservableObject {
         
         captureCount = 0
         capturedImages.removeAll()
-        remainingTime = 1
+        remainingTime = 3
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
             self?.updateTimer()
         }
@@ -36,7 +36,7 @@ class CameraViewModel: ObservableObject {
         } else {
             if captureCount < 4 {
                 captureAction?()
-                remainingTime = 1
+                remainingTime = 3
             } else {
                 // 타이머 종료 및 이미지 병합 로직
                 timer?.invalidate()
@@ -65,6 +65,9 @@ class CameraViewModel: ObservableObject {
             print("Captured images count does not match expected. Found: \(capturedImages.count)")
             return nil
         }
+        
+        
+        let flippedImages = capturedImages.map { $0.withHorizontallyFlippedOrientation() ?? $0 }
 
         // 이미지 크기를 1/2로 줄입니다.
         let resizeWidth = capturedImages[0].size.width / 2
@@ -97,6 +100,7 @@ class CameraViewModel: ObservableObject {
     }
 
 }
+
 extension UIImage {
     func resized(toWidth width: CGFloat) -> UIImage? {
         let canvasSize = CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))
@@ -105,4 +109,5 @@ extension UIImage {
         draw(in: CGRect(origin: .zero, size: canvasSize))
         return UIGraphicsGetImageFromCurrentImageContext()
     }
+    
 }

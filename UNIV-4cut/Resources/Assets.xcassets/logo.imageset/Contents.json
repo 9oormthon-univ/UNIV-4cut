@@ -1,17 +1,8 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "filename" : "goormthon_univ_logo.png",
-      "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "프로필용.svg",
+      "idiom" : "universal"
     }
   ],
   "info" : {
