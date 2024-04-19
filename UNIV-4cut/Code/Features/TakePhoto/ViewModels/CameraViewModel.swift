@@ -17,7 +17,7 @@ class CameraViewModel: ObservableObject {
         
         captureCount = 0
         capturedImages.removeAll()
-        remainingTime = 3
+        remainingTime = 6
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
             self?.updateTimer()
         }
@@ -36,7 +36,7 @@ class CameraViewModel: ObservableObject {
         } else {
             if captureCount < 4 {
                 captureAction?()
-                remainingTime = 3
+                remainingTime = 6
             } else {
                 // 타이머 종료 및 이미지 병합 로직
                 timer?.invalidate()
