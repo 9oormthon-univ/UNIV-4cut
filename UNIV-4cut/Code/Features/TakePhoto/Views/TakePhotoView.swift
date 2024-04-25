@@ -10,25 +10,38 @@ struct TakePhotoView: View {
             CustomCameraView(viewModel: cameraViewModel)
             
             VStack {
-                Spacer() // 상단 여백 생성
-                Text("\(cameraViewModel.capturedImages.count)/4")
-                    .foregroundColor(.white)
-                    .font(.headline)
-                    .padding()
-                    .background(Color.black.opacity(0.5))
-                    .cornerRadius(10)
-                    .padding(.top, 50) // 상단 Safe Area를 고려한 여백 추가
-                // 타이머 표시
                 if cameraViewModel.remainingTime > 0 {
-                    Text("남은 시간: \(cameraViewModel.remainingTime)초")
-                        .font(.title)
-                        .padding()
+                    VStack{
+                        
+                        Text("남은 시간")
+                            .font(.custom("Pretendard-SemiBold", size: 40))
+                            .foregroundColor(.black)
+                            .padding(.top,40)
+                        Text("\(cameraViewModel.remainingTime)")
+                            .font(.custom("Pretendard-SemiBold", size: 100))
+                            .foregroundColor(.black)
+
+                    }
+            
                 } else {
-                    Text("사진 촬영 중...")
+                    Text("📸")
                         .font(.title)
                         .padding()
                 }
+                Spacer() // 상단 여백 생성
+                Text("\(cameraViewModel.capturedImages.count)/4")
+                    .foregroundColor(.white)
+                    .font(.custom("Pretendard-SemiBold", size: 30))
+                    .padding()
+                    .padding(.horizontal,17)
+                    .background(Color.black.opacity(0.9))
+                    .cornerRadius(36)
+                    .padding(.bottom, 40) // 상단 Safe Area를 고려한 여백 추가
+                // 타이머 표시
+
             }
+            .foregroundColor(.white)
+
         }
         .onAppear {
             cameraViewModel.startCapturing()

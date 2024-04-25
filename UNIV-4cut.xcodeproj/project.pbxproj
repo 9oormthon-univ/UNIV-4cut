@@ -30,6 +30,12 @@
 		9823DBEC2BA1AAE7007885C4 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9823DBEB2BA1AAE7007885C4 /* OnboardingView.swift */; };
 		9823DBEF2BA1ACE4007885C4 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9823DBEE2BA1ACE4007885C4 /* CameraViewModel.swift */; };
 		9823DBF12BA1AD11007885C4 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9823DBF02BA1AD11007885C4 /* CustomCameraView.swift */; };
+		985349252BAC938F00EAE092 /* mintUniv.colorset in Resources */ = {isa = PBXBuildFile; fileRef = 9853491F2BAC938F00EAE092 /* mintUniv.colorset */; };
+		985349262BAC938F00EAE092 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 985349202BAC938F00EAE092 /* Contents.json */; };
+		985349272BAC938F00EAE092 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 985349212BAC938F00EAE092 /* Colors.xcassets */; };
+		985349282BAC938F00EAE092 /* lightGrayUniv.colorset in Resources */ = {isa = PBXBuildFile; fileRef = 985349222BAC938F00EAE092 /* lightGrayUniv.colorset */; };
+		985349292BAC938F00EAE092 /* skyBlueUniv.colorset in Resources */ = {isa = PBXBuildFile; fileRef = 985349232BAC938F00EAE092 /* skyBlueUniv.colorset */; };
+		9853492A2BAC938F00EAE092 /* grayUniv.colorset in Resources */ = {isa = PBXBuildFile; fileRef = 985349242BAC938F00EAE092 /* grayUniv.colorset */; };
 		ED7F36B42BA17C1B00D32683 /* UNIV_4cutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F36B32BA17C1B00D32683 /* UNIV_4cutApp.swift */; };
 		ED7F36B62BA17C1B00D32683 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F36B52BA17C1B00D32683 /* ContentView.swift */; };
 		ED7F36B82BA17C1C00D32683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED7F36B72BA17C1C00D32683 /* Assets.xcassets */; };
@@ -60,6 +66,12 @@
 		9823DBEB2BA1AAE7007885C4 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		9823DBEE2BA1ACE4007885C4 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		9823DBF02BA1AD11007885C4 /* CustomCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
+		9853491F2BAC938F00EAE092 /* mintUniv.colorset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = mintUniv.colorset; path = Colors.xcassets/mintUniv.colorset; sourceTree = "<group>"; };
+		985349202BAC938F00EAE092 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Contents.json; path = Colors.xcassets/Contents.json; sourceTree = "<group>"; };
+		985349212BAC938F00EAE092 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		985349222BAC938F00EAE092 /* lightGrayUniv.colorset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lightGrayUniv.colorset; path = Colors.xcassets/lightGrayUniv.colorset; sourceTree = "<group>"; };
+		985349232BAC938F00EAE092 /* skyBlueUniv.colorset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = skyBlueUniv.colorset; path = Colors.xcassets/skyBlueUniv.colorset; sourceTree = "<group>"; };
+		985349242BAC938F00EAE092 /* grayUniv.colorset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = grayUniv.colorset; path = Colors.xcassets/grayUniv.colorset; sourceTree = "<group>"; };
 		ED7F36B02BA17C1B00D32683 /* UNIV-4cut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UNIV-4cut.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7F36B32BA17C1B00D32683 /* UNIV_4cutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNIV_4cutApp.swift; sourceTree = "<group>"; };
 		ED7F36B52BA17C1B00D32683 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -202,6 +214,12 @@
 		98027B3D2BA1A365001A8978 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				985349212BAC938F00EAE092 /* Colors.xcassets */,
+				985349202BAC938F00EAE092 /* Contents.json */,
+				985349242BAC938F00EAE092 /* grayUniv.colorset */,
+				985349222BAC938F00EAE092 /* lightGrayUniv.colorset */,
+				9853491F2BAC938F00EAE092 /* mintUniv.colorset */,
+				985349232BAC938F00EAE092 /* skyBlueUniv.colorset */,
 				98027B3E2BA1A36D001A8978 /* Fonts */,
 				ED7F36B72BA17C1C00D32683 /* Assets.xcassets */,
 			);
@@ -389,14 +407,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				985349282BAC938F00EAE092 /* lightGrayUniv.colorset in Resources */,
 				981E67BA2BA498FD0038A3D6 /* GoogleService-Info.plist in Resources */,
 				98027B482BA1A378001A8978 /* Pretendard-ExtraBold.otf in Resources */,
+				985349272BAC938F00EAE092 /* Colors.xcassets in Resources */,
 				98027B442BA1A378001A8978 /* Pretendard-ExtraLight.otf in Resources */,
+				9853492A2BAC938F00EAE092 /* grayUniv.colorset in Resources */,
 				98027B462BA1A378001A8978 /* Pretendard-SemiBold.otf in Resources */,
 				98027B452BA1A378001A8978 /* Pretendard-Black.otf in Resources */,
+				985349262BAC938F00EAE092 /* Contents.json in Resources */,
 				ED7F36BB2BA17C1C00D32683 /* Preview Assets.xcassets in Resources */,
+				985349292BAC938F00EAE092 /* skyBlueUniv.colorset in Resources */,
 				98027B472BA1A378001A8978 /* Pretendard-Thin.otf in Resources */,
 				ED7F36B82BA17C1C00D32683 /* Assets.xcassets in Resources */,
+				985349252BAC938F00EAE092 /* mintUniv.colorset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
