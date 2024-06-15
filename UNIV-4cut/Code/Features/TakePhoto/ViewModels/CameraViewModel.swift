@@ -11,13 +11,13 @@ class CameraViewModel: ObservableObject {
     var timer: Timer?
     var captureCount = 0 // 개선된 부분: 초기 캡처 카운트를 0으로 설정
 
+    // 캡처 시작
     func startCapturing() {
         // 이미 실행 중인 타이머가 있다면 종료합니다.
         timer?.invalidate()
-        
         captureCount = 0
         capturedImages.removeAll()
-        remainingTime = 6
+        remainingTime = 1
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
             self?.updateTimer()
         }
@@ -36,7 +36,7 @@ class CameraViewModel: ObservableObject {
         } else {
             if captureCount < 4 {
                 captureAction?()
-                remainingTime = 6
+                remainingTime = 1
             } else {
                 // 타이머 종료 및 이미지 병합 로직
                 timer?.invalidate()
