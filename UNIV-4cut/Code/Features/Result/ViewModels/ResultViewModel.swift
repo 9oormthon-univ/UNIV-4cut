@@ -4,6 +4,7 @@ import FirebaseFirestore
 import FirebaseStorage
 import CoreImage.CIFilterBuiltins
 import UIKit
+import Photos
 
 
 
@@ -20,6 +21,7 @@ class ResultViewModel: ObservableObject {
         isFirst = false
     }
     
+    // 이미지 합치기
     func mergeImage(image: UIImage) -> UIImage? {
         isFirst = true
             // 프레임 이미지 로드
@@ -75,7 +77,7 @@ class ResultViewModel: ObservableObject {
            }
        }
     
-    // QR만들기 두번째 방버
+    // QR만들기 두번째 방법
     func generateQRCode2(from string: String) -> UIImage{
         filter.message = Data(string.utf8)
         if let outputImage = filter.outputImage{
@@ -89,6 +91,22 @@ class ResultViewModel: ObservableObject {
     }
     
     
+    
+    // 이미지 앨범에 저장
+    func saveImageToAlbum(image: UIImage, completion: @escaping (Bool, Error?) -> Void) {
+        PHPhotoLibrary.requestAuthorization { status in
+            guard status == .authorized else {
+                completion(false, NSError(domain: "PhotoLibraryAccessDenied", code: 1, userInfo: nil))
+                return
+            }
 
-
+            PHPhotoLibrary.shared().performChanges({
+                PHAssetChangeRequest.creationRequestForAsset(from: image)
+            }) { success, error in
+                DispatchQueue.main.async {
+                    completion(success, error)
+                }
+            }
+        }
+    }
 }
