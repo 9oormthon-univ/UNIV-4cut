@@ -6,12 +6,24 @@ struct OnboardingView: View {
     @State private var showingTakePhotoView = false
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-    var backButton : some View {
-        Button{
+    // 상수 선언
+    private let titleText = "찍기전에 보고 갈까요?!"
+    private let iconTexts = [
+        ("cloud", "타이머는 6초입니다!"),
+        ("cloud.fill", "촬영 기회는 딱 한번! 예쁘게 찍어봐요!."),
+        ("cloud", "사진 촬영은 총 4번 됩니다."),
+        ("cloud.fill", "촬영하기를 누르면 바로 촬영이 시작돼요!"),
+        ("camera", "촬영 완료 후 아래 4가지 프레임 중 1가지를 선택할 수 있어요!")
+    ]
+    private let frameImageName = "4cut_exmaple_onboarding"
+    
+    // 뒤로가기 버튼 뷰
+    var backButton: some View {
+        Button {
             self.presentationMode.wrappedValue.dismiss()
         } label: {
             HStack {
-                Image(systemName: "chevron.left") // 화살표 Image
+                Image(systemName: "chevron.left") // 화살표 이미지
                     .aspectRatio(contentMode: .fit)
                     .foregroundColor(Color.black)
                 Text("뒤로")
@@ -22,37 +34,34 @@ struct OnboardingView: View {
     
     var body: some View {
         VStack {
-            Text("찍기전에 보고 갈까요?!")
+            // 제목 텍스트
+            Text(titleText)
                 .font(.custom("Pretendard-SemiBold", size: 30))
                 .foregroundColor(.black)
-                .padding(.top, 60.0) // 텍스트 색상
-                .padding(.bottom, 120.0) // 텍스트 색상
+                .padding(.top, 60.0)
+                .padding(.bottom, 120.0)
             
-            
-            VStack(alignment: .leading,spacing: 10){
-                IconTextComponent(iconName: "cloud", text: "타이머는 6초입니다!")
-                
-                IconTextComponent(iconName: "cloud.fill", text: "촬영 기회는 딱 한번! 예쁘게 찍어봐요!.")
-                IconTextComponent(iconName: "cloud", text: "사진 촬영은 총 4번 됩니다.")
-                IconTextComponent(iconName: "cloud.fill", text: "촬영하기를 누르면 바로 촬영이 시작돼요!")
-                IconTextComponent(iconName: "camera", text: "촬영 완료 후 아래 4가지 프레임 중 1가지를 선택할 수 있어요!")
+            // 아이콘과 텍스트 리스트
+            VStack(alignment: .leading, spacing: 10) {
+                ForEach(iconTexts, id: \.0) { iconName, text in
+                    IconTextComponent(iconName: iconName, text: text)
+                }
             }
             
-            // 프레임 이미지 로딩을 개선합니다.
-            if let frameImage = UIImage(named: "4cut_exmaple_onboarding") {
+            // 프레임 이미지
+            if let frameImage = UIImage(named: frameImageName) {
                 Image(uiImage: frameImage)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .scaleEffect(0.9) // 이미지 크기를 80%로 줄임
-                
+                    .scaleEffect(0.9)
             } else {
-                // 프레임 이미지 로딩 실패 시 로그를 남깁니다.
                 Text("프레임 이미지를 불러올 수 없습니다.")
                     .foregroundColor(.red)
             }
             
-            // "촬영하기" 버튼
             Spacer()
+            
+            // "촬영하기" 버튼
             Button("촬영하기") {
                 showingTakePhotoView = true
             }
@@ -68,16 +77,15 @@ struct OnboardingView: View {
             requestCameraPermission()
         }
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: backButton)  // <-- 👀 버튼을 등록한다.
+        .navigationBarItems(leading: backButton)
     }
     
+    // 카메라 권한 요청 함수
     func requestCameraPermission() {
         AVCaptureDevice.requestAccess(for: .video) { granted in
             if granted {
-                // 사용자가 카메라 접근을 허용
                 print("카메라 접근 허용됨")
             } else {
-                // 사용자가 카메라 접근을 거부
                 print("카메라 접근 거부됨")
             }
         }
