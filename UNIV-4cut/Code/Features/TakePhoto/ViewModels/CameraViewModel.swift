@@ -22,6 +22,7 @@ class CameraViewModel: ObservableObject {
             self?.updateTimer()
         }
     }
+    // 폰트 뷰 
     func fontView(){
         for fontFamily in UIFont.familyNames {
             for fontName in UIFont.fontNames(forFamilyName: fontFamily) {

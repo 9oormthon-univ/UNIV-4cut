@@ -38,29 +38,28 @@ struct MobileOnboardingView: View {
             Text(titleText)
                 .font(.custom("Pretendard-SemiBold", size: 30))
                 .foregroundColor(.black)
-                .padding(.top, 60.0)
-                .padding(.bottom, 120.0)
+                .padding(.top, 100.0)
+                .padding(.bottom, 60.0)
             
             // 아이콘과 텍스트 리스트
             VStack(alignment: .leading, spacing: 10) {
                 ForEach(iconTexts, id: \.0) { iconName, text in
-                    IconTextComponent(iconName: iconName, text: text)
+                    IconTextComponent(iconName: iconName, text: text, textSize:16)
                 }
             }
+            .padding(.bottom, 30.0)
             
             // 프레임 이미지
             if let frameImage = UIImage(named: frameImageName) {
                 Image(uiImage: frameImage)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .scaleEffect(0.9)
+                    .scaleEffect(0.8)
             } else {
                 Text("프레임 이미지를 불러올 수 없습니다.")
                     .foregroundColor(.red)
             }
-            
             Spacer()
-            
             // "촬영하기" 버튼
             Button("촬영하기") {
                 showingTakePhotoView = true
