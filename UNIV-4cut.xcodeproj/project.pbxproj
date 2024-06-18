@@ -43,6 +43,7 @@
 		9853492A2BAC938F00EAE092 /* grayUniv.colorset in Resources */ = {isa = PBXBuildFile; fileRef = 985349242BAC938F00EAE092 /* grayUniv.colorset */; };
 		98FBF7FB2C21605400C2DB18 /* MobileHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBF7FA2C21605400C2DB18 /* MobileHomeView.swift */; };
 		98FBF7FD2C21638E00C2DB18 /* MobileOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBF7FC2C21638E00C2DB18 /* MobileOnboardingView.swift */; };
+		98FBF7FF2C21659900C2DB18 /* MobileResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBF7FE2C21659900C2DB18 /* MobileResultView.swift */; };
 		ED7F36B42BA17C1B00D32683 /* UNIV_4cutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F36B32BA17C1B00D32683 /* UNIV_4cutApp.swift */; };
 		ED7F36B62BA17C1B00D32683 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F36B52BA17C1B00D32683 /* ContentView.swift */; };
 		ED7F36B82BA17C1C00D32683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED7F36B72BA17C1C00D32683 /* Assets.xcassets */; };
@@ -84,6 +85,7 @@
 		985349242BAC938F00EAE092 /* grayUniv.colorset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = grayUniv.colorset; path = Colors.xcassets/grayUniv.colorset; sourceTree = "<group>"; };
 		98FBF7FA2C21605400C2DB18 /* MobileHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileHomeView.swift; sourceTree = "<group>"; };
 		98FBF7FC2C21638E00C2DB18 /* MobileOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileOnboardingView.swift; sourceTree = "<group>"; };
+		98FBF7FE2C21659900C2DB18 /* MobileResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileResultView.swift; sourceTree = "<group>"; };
 		ED7F36B02BA17C1B00D32683 /* UNIV-4cut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UNIV-4cut.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7F36B32BA17C1B00D32683 /* UNIV_4cutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNIV_4cutApp.swift; sourceTree = "<group>"; };
 		ED7F36B52BA17C1B00D32683 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				9827EB642C1E30C6002B1EA1 /* QRCodeSheetView.swift */,
 				9827EB662C1E31C0002B1EA1 /* ReusableButton.swift */,
 				9827EB682C1E3525002B1EA1 /* AlertView.swift */,
+				98FBF7FE2C21659900C2DB18 /* MobileResultView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				98FBF7FD2C21638E00C2DB18 /* MobileOnboardingView.swift in Sources */,
 				981E67B82BA497A10038A3D6 /* ResultViewModel.swift in Sources */,
 				ED7F36B62BA17C1B00D32683 /* ContentView.swift in Sources */,
+				98FBF7FF2C21659900C2DB18 /* MobileResultView.swift in Sources */,
 				9823DBEC2BA1AAE7007885C4 /* OnboardingView.swift in Sources */,
 				9823DBEF2BA1ACE4007885C4 /* CameraViewModel.swift in Sources */,
 				9823DBE82BA1AA58007885C4 /* TakePhotoView.swift in Sources */,

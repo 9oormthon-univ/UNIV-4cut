@@ -31,6 +31,7 @@ class CameraViewModel: ObservableObject {
         }
     }
 
+    // 업데이트 타이머 
     func updateTimer() {
         if remainingTime > 0 {
             remainingTime -= 1

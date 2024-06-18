@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ResultView: View {
+struct MobileResultView: View {
     @StateObject private var viewModel = ResultViewModel()
     let mergedImage: UIImage
     
@@ -19,11 +19,12 @@ struct ResultView: View {
             Spacer(minLength: 30)
             GeometryReader { geometry in
                 ZStack {
+                    // 병합 이미지
                     Image(uiImage: mergedImage)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .padding(.bottom, 180.0)
-                        .frame(width: geometry.size.width, height: geometry.size.height - 255)
+                        .padding(.bottom, 100.0)
+                        .frame(width: geometry.size.width, height: geometry.size.height - 235)
                         .navigationBarHidden(true)
                     
                     // 프레임 이미지 로딩
@@ -63,12 +64,12 @@ struct ResultView: View {
     }
 }
 
-struct ResultView_Previews: PreviewProvider {
+struct MobileResultView_Previews: PreviewProvider {
     static var previews: some View {
         if let exampleImage = UIImage(named: "4cut_example") {
-            ResultView(mergedImage: exampleImage)
+            MobileResultView(mergedImage: exampleImage)
         } else {
-            ResultView(mergedImage: UIImage())
+            MobileResultView(mergedImage: UIImage())
         }
     }
 }

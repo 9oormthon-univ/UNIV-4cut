@@ -7,7 +7,7 @@ struct FrameSelectionView: View {
         HStack(alignment: .center, spacing: 30) {
             ForEach(0..<4) { index in
                 Circle()
-                    .frame(width: 60, height: 60)
+                    .frame(width: 50, height: 60)
                     .foregroundColor(frameColor(for: index))
                     .overlay(
                         Circle()

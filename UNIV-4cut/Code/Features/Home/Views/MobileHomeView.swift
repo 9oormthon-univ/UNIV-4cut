@@ -13,7 +13,7 @@ struct MobileHomeView: View {
                     .frame(width: 300, height: 300)
                 Spacer()
                 // 촬영하기 버튼 -> 온보딩 뷰로 이동 : 네비게이션 링크 방식
-                NavigationLink(destination: OnboardingView()) {
+                NavigationLink(destination: MobileOnboardingView()) {
                     Text("촬영하기")
                         .foregroundColor(.white)
                         .frame(width: 200, height: 50)
