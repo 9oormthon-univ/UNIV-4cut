@@ -6,7 +6,8 @@
 .DS_Store
 .AppleDouble
 .LSOverride
-
+./GoogleService-info
+.GoogleService-info
 # Icon must end with two \r
 Icon
 

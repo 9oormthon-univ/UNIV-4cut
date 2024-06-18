@@ -9,9 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HomeView()
+        GeometryReader { geometry in
+            if geometry.size.width > 600 {
+                // iPad 레이아웃
+                HomeView()
+            } else {
+                // iPhone 레이아웃
+                MobileHomeView()
+            }
+        }
     }
 }
+
 
 #Preview {
     ContentView()
