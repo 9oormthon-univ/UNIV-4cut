@@ -30,12 +30,20 @@
 		9823DBEC2BA1AAE7007885C4 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9823DBEB2BA1AAE7007885C4 /* OnboardingView.swift */; };
 		9823DBEF2BA1ACE4007885C4 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9823DBEE2BA1ACE4007885C4 /* CameraViewModel.swift */; };
 		9823DBF12BA1AD11007885C4 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9823DBF02BA1AD11007885C4 /* CustomCameraView.swift */; };
+		9827EB612C1E3095002B1EA1 /* FrameSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9827EB602C1E3095002B1EA1 /* FrameSelectionView.swift */; };
+		9827EB632C1E30B1002B1EA1 /* ButtonActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9827EB622C1E30B1002B1EA1 /* ButtonActionView.swift */; };
+		9827EB652C1E30C6002B1EA1 /* QRCodeSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9827EB642C1E30C6002B1EA1 /* QRCodeSheetView.swift */; };
+		9827EB672C1E31C0002B1EA1 /* ReusableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9827EB662C1E31C0002B1EA1 /* ReusableButton.swift */; };
+		9827EB692C1E3525002B1EA1 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9827EB682C1E3525002B1EA1 /* AlertView.swift */; };
 		985349252BAC938F00EAE092 /* mintUniv.colorset in Resources */ = {isa = PBXBuildFile; fileRef = 9853491F2BAC938F00EAE092 /* mintUniv.colorset */; };
 		985349262BAC938F00EAE092 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 985349202BAC938F00EAE092 /* Contents.json */; };
 		985349272BAC938F00EAE092 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 985349212BAC938F00EAE092 /* Colors.xcassets */; };
 		985349282BAC938F00EAE092 /* lightGrayUniv.colorset in Resources */ = {isa = PBXBuildFile; fileRef = 985349222BAC938F00EAE092 /* lightGrayUniv.colorset */; };
 		985349292BAC938F00EAE092 /* skyBlueUniv.colorset in Resources */ = {isa = PBXBuildFile; fileRef = 985349232BAC938F00EAE092 /* skyBlueUniv.colorset */; };
 		9853492A2BAC938F00EAE092 /* grayUniv.colorset in Resources */ = {isa = PBXBuildFile; fileRef = 985349242BAC938F00EAE092 /* grayUniv.colorset */; };
+		98FBF7FB2C21605400C2DB18 /* MobileHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBF7FA2C21605400C2DB18 /* MobileHomeView.swift */; };
+		98FBF7FD2C21638E00C2DB18 /* MobileOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBF7FC2C21638E00C2DB18 /* MobileOnboardingView.swift */; };
+		98FBF7FF2C21659900C2DB18 /* MobileResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBF7FE2C21659900C2DB18 /* MobileResultView.swift */; };
 		ED7F36B42BA17C1B00D32683 /* UNIV_4cutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F36B32BA17C1B00D32683 /* UNIV_4cutApp.swift */; };
 		ED7F36B62BA17C1B00D32683 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F36B52BA17C1B00D32683 /* ContentView.swift */; };
 		ED7F36B82BA17C1C00D32683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED7F36B72BA17C1C00D32683 /* Assets.xcassets */; };
@@ -46,8 +54,6 @@
 		98027B212BA1A2C0001A8978 /* .keep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		98027B252BA1A2D7001A8978 /* .keep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		98027B2B2BA1A2F3001A8978 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		98027B2D2BA1A30B001A8978 /* .keep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
-		98027B2F2BA1A311001A8978 /* .keep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		98027B332BA1A326001A8978 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		98027B372BA1A340001A8978 /* .keep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		98027B3B2BA1A351001A8978 /* .keep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
@@ -66,12 +72,20 @@
 		9823DBEB2BA1AAE7007885C4 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		9823DBEE2BA1ACE4007885C4 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		9823DBF02BA1AD11007885C4 /* CustomCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
+		9827EB602C1E3095002B1EA1 /* FrameSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameSelectionView.swift; sourceTree = "<group>"; };
+		9827EB622C1E30B1002B1EA1 /* ButtonActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonActionView.swift; sourceTree = "<group>"; };
+		9827EB642C1E30C6002B1EA1 /* QRCodeSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeSheetView.swift; sourceTree = "<group>"; };
+		9827EB662C1E31C0002B1EA1 /* ReusableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableButton.swift; sourceTree = "<group>"; };
+		9827EB682C1E3525002B1EA1 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		9853491F2BAC938F00EAE092 /* mintUniv.colorset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = mintUniv.colorset; path = Colors.xcassets/mintUniv.colorset; sourceTree = "<group>"; };
 		985349202BAC938F00EAE092 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Contents.json; path = Colors.xcassets/Contents.json; sourceTree = "<group>"; };
 		985349212BAC938F00EAE092 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		985349222BAC938F00EAE092 /* lightGrayUniv.colorset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lightGrayUniv.colorset; path = Colors.xcassets/lightGrayUniv.colorset; sourceTree = "<group>"; };
 		985349232BAC938F00EAE092 /* skyBlueUniv.colorset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = skyBlueUniv.colorset; path = Colors.xcassets/skyBlueUniv.colorset; sourceTree = "<group>"; };
 		985349242BAC938F00EAE092 /* grayUniv.colorset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = grayUniv.colorset; path = Colors.xcassets/grayUniv.colorset; sourceTree = "<group>"; };
+		98FBF7FA2C21605400C2DB18 /* MobileHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileHomeView.swift; sourceTree = "<group>"; };
+		98FBF7FC2C21638E00C2DB18 /* MobileOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileOnboardingView.swift; sourceTree = "<group>"; };
+		98FBF7FE2C21659900C2DB18 /* MobileResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileResultView.swift; sourceTree = "<group>"; };
 		ED7F36B02BA17C1B00D32683 /* UNIV-4cut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UNIV-4cut.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7F36B32BA17C1B00D32683 /* UNIV_4cutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNIV_4cutApp.swift; sourceTree = "<group>"; };
 		ED7F36B52BA17C1B00D32683 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -146,35 +160,18 @@
 		98027B272BA1A2DB001A8978 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				98027B2A2BA1A2E7001A8978 /* ViewModels */,
 				98027B292BA1A2E3001A8978 /* Views */,
-				98027B282BA1A2DE001A8978 /* Models */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		98027B282BA1A2DE001A8978 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				98027B2D2BA1A30B001A8978 /* .keep */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		98027B292BA1A2E3001A8978 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				98027B2B2BA1A2F3001A8978 /* HomeView.swift */,
+				98FBF7FA2C21605400C2DB18 /* MobileHomeView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		98027B2A2BA1A2E7001A8978 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				98027B2F2BA1A311001A8978 /* .keep */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		98027B312BA1A315001A8978 /* Result */ = {
@@ -191,6 +188,12 @@
 			isa = PBXGroup;
 			children = (
 				98027B332BA1A326001A8978 /* ResultView.swift */,
+				9827EB602C1E3095002B1EA1 /* FrameSelectionView.swift */,
+				9827EB622C1E30B1002B1EA1 /* ButtonActionView.swift */,
+				9827EB642C1E30C6002B1EA1 /* QRCodeSheetView.swift */,
+				9827EB662C1E31C0002B1EA1 /* ReusableButton.swift */,
+				9827EB682C1E3525002B1EA1 /* AlertView.swift */,
+				98FBF7FE2C21659900C2DB18 /* MobileResultView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			children = (
 				9823DBEB2BA1AAE7007885C4 /* OnboardingView.swift */,
 				981E67D12BA4ADD10038A3D6 /* IconTextComponent.swift */,
+				98FBF7FC2C21638E00C2DB18 /* MobileOnboardingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -433,16 +437,24 @@
 			files = (
 				98027B2C2BA1A2F4001A8978 /* HomeView.swift in Sources */,
 				98027B342BA1A326001A8978 /* ResultView.swift in Sources */,
+				9827EB632C1E30B1002B1EA1 /* ButtonActionView.swift in Sources */,
 				981E67CC2BA49E100038A3D6 /* ImageProcessor.swift in Sources */,
+				98FBF7FD2C21638E00C2DB18 /* MobileOnboardingView.swift in Sources */,
 				981E67B82BA497A10038A3D6 /* ResultViewModel.swift in Sources */,
 				ED7F36B62BA17C1B00D32683 /* ContentView.swift in Sources */,
+				98FBF7FF2C21659900C2DB18 /* MobileResultView.swift in Sources */,
 				9823DBEC2BA1AAE7007885C4 /* OnboardingView.swift in Sources */,
 				9823DBEF2BA1ACE4007885C4 /* CameraViewModel.swift in Sources */,
 				9823DBE82BA1AA58007885C4 /* TakePhotoView.swift in Sources */,
 				ED7F36B42BA17C1B00D32683 /* UNIV_4cutApp.swift in Sources */,
 				981E67D02BA4A9550038A3D6 /* Font.swift in Sources */,
+				9827EB652C1E30C6002B1EA1 /* QRCodeSheetView.swift in Sources */,
+				9827EB612C1E3095002B1EA1 /* FrameSelectionView.swift in Sources */,
 				9823DBF12BA1AD11007885C4 /* CustomCameraView.swift in Sources */,
+				9827EB672C1E31C0002B1EA1 /* ReusableButton.swift in Sources */,
 				981E67D22BA4ADD10038A3D6 /* IconTextComponent.swift in Sources */,
+				9827EB692C1E3525002B1EA1 /* AlertView.swift in Sources */,
+				98FBF7FB2C21605400C2DB18 /* MobileHomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,22 +592,22 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "UNIV-4cut/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "유니브네컷";
+				INFOPLIST_KEY_CFBundleDisplayName = "나만의 네컷";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 사용을 허용하시겠습니까?";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진을 허용하시겠습니까?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.9oormthonUNIV.UNIV-4cut";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.9oormthonUNIV.UNIV--4cut";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -615,22 +627,22 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "UNIV-4cut/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "유니브네컷";
+				INFOPLIST_KEY_CFBundleDisplayName = "나만의 네컷";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 사용을 허용하시겠습니까?";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진을 허용하시겠습니까?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.9oormthonUNIV.UNIV-4cut";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.9oormthonUNIV.UNIV--4cut";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

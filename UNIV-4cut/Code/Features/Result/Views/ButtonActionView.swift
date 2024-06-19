@@ -16,14 +16,14 @@ struct ButtonActionView: View {
     var body: some View {
         HStack(alignment: .center) {
             Spacer()
-            ReusableButton(title: "홈으로") {
+            ReusableButton(title: "홈",boxWidth:90) {
                 showingHomeView = true
             }
             .fullScreenCover(isPresented: $showingHomeView) {
                 HomeView()
             }
             
-            ReusableButton(title: "QR코드 생성") {
+            ReusableButton(title: "QR 코드",boxWidth:90) {
                 showingQRView = true
                 generateQRCode()
             }
@@ -31,7 +31,7 @@ struct ButtonActionView: View {
                 QRCodeSheetView(viewModel: viewModel, showingHomeView: $showingHomeView, showingQRView: $showingQRView)
             }
             
-            ReusableButton(title: "앨범에 저장") {
+            ReusableButton(title: "앨범 저장",boxWidth:90) {
                 saveImgInGallery()
             }
             Spacer()
@@ -41,6 +41,7 @@ struct ButtonActionView: View {
         }
     }
     
+    // 큐알코드 생성
     private func generateQRCode() {
         if let frameImage = UIImage(named: "4cut_\(selectedFrameIndex + 1)") {
             if let frameMergedImage = processor.mergeImage(image: mergedImage, frameImage: frameImage) {
@@ -51,6 +52,7 @@ struct ButtonActionView: View {
         }
     }
     
+    // 이미지 저장
     private func saveImgInGallery() {
         if let frameImage = UIImage(named: "4cut_\(selectedFrameIndex + 1)") {
             if let frameMergedImage = processor.mergeImage(image: mergedImage, frameImage: frameImage) {
@@ -62,7 +64,7 @@ struct ButtonActionView: View {
                         alertTitle = "저장 실패"
                         alertMessage = "앨범에 저장 실패: \(error.localizedDescription)"
                     }
-                    showingAlert = true
+                    showingAlert =  true
                 }
             } else {
                 alertTitle = "저장 실패"

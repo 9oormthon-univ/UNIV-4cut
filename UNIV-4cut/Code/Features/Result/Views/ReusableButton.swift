@@ -3,13 +3,14 @@ import SwiftUI
 struct ReusableButton: View {
     let title: String
     let action: () -> Void
+    var boxWidth: CGFloat = 140
     
     var body: some View {
         Button(action: action) {
             Text(title)
                 .font(.system(size: 18, weight: .bold))
                 .foregroundColor(.white)
-                .frame(width: 140, height: 50)
+                .frame(width: boxWidth, height: 50)
                 .background(Color.black)
                 .cornerRadius(10)
         }

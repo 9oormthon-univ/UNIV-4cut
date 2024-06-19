@@ -22,6 +22,7 @@ class CameraViewModel: ObservableObject {
             self?.updateTimer()
         }
     }
+    // 폰트 뷰 
     func fontView(){
         for fontFamily in UIFont.familyNames {
             for fontName in UIFont.fontNames(forFamilyName: fontFamily) {
@@ -30,6 +31,7 @@ class CameraViewModel: ObservableObject {
         }
     }
 
+    // 업데이트 타이머 
     func updateTimer() {
         if remainingTime > 0 {
             remainingTime -= 1
