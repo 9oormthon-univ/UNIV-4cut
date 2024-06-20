@@ -22,8 +22,8 @@ struct ResultView: View {
                     Image(uiImage: mergedImage)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .padding(.bottom, 180.0)
-                        .frame(width: geometry.size.width, height: geometry.size.height - 255)
+                        .padding(.bottom, adjustedBottom(for:geometry))
+                        .frame(width: geometry.size.width, height: adjustedHeight(for: geometry))
                         .navigationBarHidden(true)
                     
                     // 프레임 이미지 로딩
@@ -59,6 +59,24 @@ struct ResultView: View {
             }
             .padding(.all)
             .edgesIgnoringSafeArea(.all)
+        }
+    }
+    
+    // iPad 크기에 따라 높이를 조정하는 함수
+    // 화면 너비에 따라 높이를 조정하는 함수
+    private func adjustedHeight(for geometry: GeometryProxy) -> CGFloat {
+        if geometry.size.width >= 1000 {
+            return geometry.size.height - 280
+        } else {
+            return geometry.size.height - 255
+        }
+    }
+    
+    private func adjustedBottom(for geometry: GeometryProxy) -> CGFloat {
+        if geometry.size.width >= 1000 {
+            return 200
+        } else {
+            return 180
         }
     }
 }
