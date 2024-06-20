@@ -4,14 +4,6 @@ import AVFoundation
 struct CustomCameraView: UIViewRepresentable {
     @ObservedObject var viewModel: CameraViewModel
 
-//    func makeUIView(context: Context) -> UIView {
-//        let coordinator = context.coordinator
-//        viewModel.captureAction = coordinator.takePicture
-//        let view = UIView()
-//        view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 40)
-//        context.coordinator.setupCameraSession()
-//        return view
-//    }
     func makeUIView(context: Context) -> UIView {
         let coordinator = context.coordinator
         viewModel.captureAction = coordinator.takePicture
@@ -51,15 +43,6 @@ struct CustomCameraView: UIViewRepresentable {
             if captureSession.canAddOutput(photoOutput) {
                 captureSession.addOutput(photoOutput)
             }
-
-//            DispatchQueue.main.async {
-//                if let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) {
-//                    let previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
-//                    previewLayer.frame = CGRect(x: 0, y: 0, width: window.bounds.width, height: window.bounds.height * (5/6))
-//                    previewLayer.videoGravity = .resizeAspectFill
-//                    window.layer.addSublayer(previewLayer)
-//                }
-//            }
             let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
                previewLayer.frame = view.bounds // view의 bounds 사용
                previewLayer.videoGravity = .resizeAspectFill

@@ -41,9 +41,6 @@
 		985349282BAC938F00EAE092 /* lightGrayUniv.colorset in Resources */ = {isa = PBXBuildFile; fileRef = 985349222BAC938F00EAE092 /* lightGrayUniv.colorset */; };
 		985349292BAC938F00EAE092 /* skyBlueUniv.colorset in Resources */ = {isa = PBXBuildFile; fileRef = 985349232BAC938F00EAE092 /* skyBlueUniv.colorset */; };
 		9853492A2BAC938F00EAE092 /* grayUniv.colorset in Resources */ = {isa = PBXBuildFile; fileRef = 985349242BAC938F00EAE092 /* grayUniv.colorset */; };
-		98FBF7FB2C21605400C2DB18 /* MobileHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBF7FA2C21605400C2DB18 /* MobileHomeView.swift */; };
-		98FBF7FD2C21638E00C2DB18 /* MobileOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBF7FC2C21638E00C2DB18 /* MobileOnboardingView.swift */; };
-		98FBF7FF2C21659900C2DB18 /* MobileResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBF7FE2C21659900C2DB18 /* MobileResultView.swift */; };
 		ED7F36B42BA17C1B00D32683 /* UNIV_4cutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F36B32BA17C1B00D32683 /* UNIV_4cutApp.swift */; };
 		ED7F36B62BA17C1B00D32683 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F36B52BA17C1B00D32683 /* ContentView.swift */; };
 		ED7F36B82BA17C1C00D32683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED7F36B72BA17C1C00D32683 /* Assets.xcassets */; };
@@ -83,9 +80,6 @@
 		985349222BAC938F00EAE092 /* lightGrayUniv.colorset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lightGrayUniv.colorset; path = Colors.xcassets/lightGrayUniv.colorset; sourceTree = "<group>"; };
 		985349232BAC938F00EAE092 /* skyBlueUniv.colorset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = skyBlueUniv.colorset; path = Colors.xcassets/skyBlueUniv.colorset; sourceTree = "<group>"; };
 		985349242BAC938F00EAE092 /* grayUniv.colorset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = grayUniv.colorset; path = Colors.xcassets/grayUniv.colorset; sourceTree = "<group>"; };
-		98FBF7FA2C21605400C2DB18 /* MobileHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileHomeView.swift; sourceTree = "<group>"; };
-		98FBF7FC2C21638E00C2DB18 /* MobileOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileOnboardingView.swift; sourceTree = "<group>"; };
-		98FBF7FE2C21659900C2DB18 /* MobileResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileResultView.swift; sourceTree = "<group>"; };
 		ED7F36B02BA17C1B00D32683 /* UNIV-4cut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UNIV-4cut.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7F36B32BA17C1B00D32683 /* UNIV_4cutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNIV_4cutApp.swift; sourceTree = "<group>"; };
 		ED7F36B52BA17C1B00D32683 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -169,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				98027B2B2BA1A2F3001A8978 /* HomeView.swift */,
-				98FBF7FA2C21605400C2DB18 /* MobileHomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,13 +180,8 @@
 		98027B322BA1A31B001A8978 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9804DD112C23F5ED0095F8A8 /* component */,
 				98027B332BA1A326001A8978 /* ResultView.swift */,
-				9827EB602C1E3095002B1EA1 /* FrameSelectionView.swift */,
-				9827EB622C1E30B1002B1EA1 /* ButtonActionView.swift */,
-				9827EB642C1E30C6002B1EA1 /* QRCodeSheetView.swift */,
-				9827EB662C1E31C0002B1EA1 /* ReusableButton.swift */,
-				9827EB682C1E3525002B1EA1 /* AlertView.swift */,
-				98FBF7FE2C21659900C2DB18 /* MobileResultView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -241,6 +229,33 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		9804DD112C23F5ED0095F8A8 /* component */ = {
+			isa = PBXGroup;
+			children = (
+				9827EB602C1E3095002B1EA1 /* FrameSelectionView.swift */,
+				9827EB622C1E30B1002B1EA1 /* ButtonActionView.swift */,
+				9827EB642C1E30C6002B1EA1 /* QRCodeSheetView.swift */,
+				9827EB662C1E31C0002B1EA1 /* ReusableButton.swift */,
+				9827EB682C1E3525002B1EA1 /* AlertView.swift */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
+		9804DD122C23F60C0095F8A8 /* component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
+		9804DD132C23F6170095F8A8 /* component */ = {
+			isa = PBXGroup;
+			children = (
+				981E67D12BA4ADD10038A3D6 /* IconTextComponent.swift */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
 		981E67CA2BA49DFC0038A3D6 /* Result */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +284,7 @@
 		9823DBE42BA1AA38007885C4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9804DD122C23F60C0095F8A8 /* component */,
 				9823DBF02BA1AD11007885C4 /* CustomCameraView.swift */,
 				9823DBE72BA1AA58007885C4 /* TakePhotoView.swift */,
 			);
@@ -286,9 +302,8 @@
 		9823DBEA2BA1AADC007885C4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9804DD132C23F6170095F8A8 /* component */,
 				9823DBEB2BA1AAE7007885C4 /* OnboardingView.swift */,
-				981E67D12BA4ADD10038A3D6 /* IconTextComponent.swift */,
-				98FBF7FC2C21638E00C2DB18 /* MobileOnboardingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -439,10 +454,8 @@
 				98027B342BA1A326001A8978 /* ResultView.swift in Sources */,
 				9827EB632C1E30B1002B1EA1 /* ButtonActionView.swift in Sources */,
 				981E67CC2BA49E100038A3D6 /* ImageProcessor.swift in Sources */,
-				98FBF7FD2C21638E00C2DB18 /* MobileOnboardingView.swift in Sources */,
 				981E67B82BA497A10038A3D6 /* ResultViewModel.swift in Sources */,
 				ED7F36B62BA17C1B00D32683 /* ContentView.swift in Sources */,
-				98FBF7FF2C21659900C2DB18 /* MobileResultView.swift in Sources */,
 				9823DBEC2BA1AAE7007885C4 /* OnboardingView.swift in Sources */,
 				9823DBEF2BA1ACE4007885C4 /* CameraViewModel.swift in Sources */,
 				9823DBE82BA1AA58007885C4 /* TakePhotoView.swift in Sources */,
@@ -454,7 +467,6 @@
 				9827EB672C1E31C0002B1EA1 /* ReusableButton.swift in Sources */,
 				981E67D22BA4ADD10038A3D6 /* IconTextComponent.swift in Sources */,
 				9827EB692C1E3525002B1EA1 /* AlertView.swift in Sources */,
-				98FBF7FB2C21605400C2DB18 /* MobileHomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

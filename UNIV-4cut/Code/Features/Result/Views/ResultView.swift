@@ -5,8 +5,6 @@ struct ResultView: View {
     let mergedImage: UIImage
     
     // 변수 리스트
-    // showingQRView : 큐알 화면
-    // showingHomeView : 홈 뷰
     @State private var showingQRView = false
     @State private var showingHomeView = false
     @State private var selectedFrameIndex = 0
@@ -22,11 +20,10 @@ struct ResultView: View {
                     Image(uiImage: mergedImage)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .padding(.bottom, adjustedBottom(for:geometry))
-                        .frame(width: geometry.size.width, height: adjustedHeight(for: geometry))
+                        .padding(.bottom, adjustedValue(for: geometry, large: 200, medium: 180, small: 100))
+                        .frame(width: geometry.size.width, height: adjustedValue(for: geometry, large: geometry.size.height - 280, medium: geometry.size.height - 255, small: geometry.size.height - 235))
                         .navigationBarHidden(true)
                     
-                    // 프레임 이미지 로딩
                     if let frameImage = UIImage(named: "4cut_\(selectedFrameIndex + 1)") {
                         Image(uiImage: frameImage)
                             .resizable()
@@ -62,21 +59,15 @@ struct ResultView: View {
         }
     }
     
-    // iPad 크기에 따라 높이를 조정하는 함수
     // 화면 너비에 따라 높이를 조정하는 함수
-    private func adjustedHeight(for geometry: GeometryProxy) -> CGFloat {
-        if geometry.size.width >= 1000 {
-            return geometry.size.height - 280
-        } else {
-            return geometry.size.height - 255
-        }
-    }
-    
-    private func adjustedBottom(for geometry: GeometryProxy) -> CGFloat {
-        if geometry.size.width >= 1000 {
-            return 200
-        } else {
-            return 180
+    private func adjustedValue(for geometry: GeometryProxy, large: CGFloat, medium: CGFloat, small: CGFloat) -> CGFloat {
+        switch geometry.size.width {
+        case 1000...:
+            return large
+        case 600..<1000:
+            return medium
+        default:
+            return small
         }
     }
 }

@@ -47,31 +47,16 @@ struct TakePhotoView: View {
             cameraViewModel.startCapturing()
         }
         .fullScreenCover(isPresented: $isPresentingResultView) {
-            // ResultView에 mergedImage가 nil인 경우에 대한 처리 추가
-            FullScreenResultView(mergedImage: cameraViewModel.mergedImage)
+            // ResultView에 mergedImage가 nil인 경우에 대한 처리를 추가
+            if let exampleImage = UIImage(named: "4cut_example") {
+                ResultView(mergedImage: cameraViewModel.mergedImage ?? exampleImage)
+            } else {
+                ResultView(mergedImage: UIImage())
+            }
         }
         .onChange(of: cameraViewModel.mergedImage) { _ in
             // mergedImage의 상태 변화가 감지되면 isPresentingResultView를 true로 설정하여 시트 표시
             isPresentingResultView = cameraViewModel.mergedImage != nil
-        }
-    }
-}
-
-// ResultView를 전체 화면에 표시하기 위한 뷰
-struct FullScreenResultView: View {
-    let mergedImage: UIImage?
-
-    var body: some View {
-        let imageToShow = mergedImage ?? UIImage(named: "4cut_example") ?? UIImage()
-
-        GeometryReader { geometry in
-            if geometry.size.width > 600 {
-                // iPad 레이아웃
-                ResultView(mergedImage: imageToShow)
-            } else {
-                // iPhone 레이아웃
-                MobileResultView(mergedImage: imageToShow)
-            }
         }
     }
 }
