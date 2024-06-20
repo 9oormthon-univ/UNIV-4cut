@@ -8,6 +8,7 @@ struct FrameSelectionView: View {
             ForEach(0..<4) { index in
                 Circle()
                     .frame(width: 50, height: 60)
+                    .shadow(color: Color.gray.opacity(0.4), radius: 2, x: 1, y: 1)
                     .foregroundColor(frameColor(for: index))
                     .overlay(
                         Circle()
