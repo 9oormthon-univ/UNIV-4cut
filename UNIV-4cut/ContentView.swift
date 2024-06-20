@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         GeometryReader { geometry in
             if geometry.size.width > 600 {
-                // iPad 레이아웃
+                // iPad 11인치 레이아웃
                 HomeView()
             } else {
                 // iPhone 레이아웃

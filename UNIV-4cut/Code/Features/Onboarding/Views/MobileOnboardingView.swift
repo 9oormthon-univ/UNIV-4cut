@@ -38,7 +38,7 @@ struct MobileOnboardingView: View {
             Text(titleText)
                 .font(.custom("Pretendard-SemiBold", size: 30))
                 .foregroundColor(.black)
-                .padding(.top, 100.0)
+                .padding(.top, 60.0)
                 .padding(.bottom, 60.0)
             
             // 아이콘과 텍스트 리스트

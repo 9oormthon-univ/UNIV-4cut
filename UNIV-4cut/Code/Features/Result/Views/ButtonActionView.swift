@@ -20,7 +20,15 @@ struct ButtonActionView: View {
                 showingHomeView = true
             }
             .fullScreenCover(isPresented: $showingHomeView) {
-                HomeView()
+                GeometryReader { geometry in
+                    if geometry.size.width > 600 {
+                        // iPad 11인치 레이아웃
+                        HomeView()
+                    } else {
+                        // iPhone 레이아웃
+                        MobileHomeView()
+                    }
+                }
             }
             
             ReusableButton(title: "QR 코드",boxWidth:90) {
