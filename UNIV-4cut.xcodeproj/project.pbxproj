@@ -14,6 +14,7 @@
 		98027B462BA1A378001A8978 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 98027B412BA1A378001A8978 /* Pretendard-SemiBold.otf */; };
 		98027B472BA1A378001A8978 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 98027B422BA1A378001A8978 /* Pretendard-Thin.otf */; };
 		98027B482BA1A378001A8978 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 98027B432BA1A378001A8978 /* Pretendard-ExtraBold.otf */; };
+		9804DD162C23FB730095F8A8 /* CustomizableFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9804DD152C23FB730095F8A8 /* CustomizableFrameView.swift */; };
 		981E67B82BA497A10038A3D6 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981E67B72BA497A10038A3D6 /* ResultViewModel.swift */; };
 		981E67BA2BA498FD0038A3D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 981E67B92BA498FD0038A3D6 /* GoogleService-Info.plist */; };
 		981E67BD2BA499FA0038A3D6 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 981E67BC2BA499FA0038A3D6 /* FirebaseDatabase */; };
@@ -41,6 +42,7 @@
 		985349282BAC938F00EAE092 /* lightGrayUniv.colorset in Resources */ = {isa = PBXBuildFile; fileRef = 985349222BAC938F00EAE092 /* lightGrayUniv.colorset */; };
 		985349292BAC938F00EAE092 /* skyBlueUniv.colorset in Resources */ = {isa = PBXBuildFile; fileRef = 985349232BAC938F00EAE092 /* skyBlueUniv.colorset */; };
 		9853492A2BAC938F00EAE092 /* grayUniv.colorset in Resources */ = {isa = PBXBuildFile; fileRef = 985349242BAC938F00EAE092 /* grayUniv.colorset */; };
+		98F656612C269D2800E6AB23 /* ContributionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F656602C269D2800E6AB23 /* ContributionView.swift */; };
 		ED7F36B42BA17C1B00D32683 /* UNIV_4cutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F36B32BA17C1B00D32683 /* UNIV_4cutApp.swift */; };
 		ED7F36B62BA17C1B00D32683 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F36B52BA17C1B00D32683 /* ContentView.swift */; };
 		ED7F36B82BA17C1C00D32683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED7F36B72BA17C1C00D32683 /* Assets.xcassets */; };
@@ -59,6 +61,7 @@
 		98027B412BA1A378001A8978 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		98027B422BA1A378001A8978 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
 		98027B432BA1A378001A8978 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		9804DD152C23FB730095F8A8 /* CustomizableFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizableFrameView.swift; sourceTree = "<group>"; };
 		981E67B72BA497A10038A3D6 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		981E67B92BA498FD0038A3D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		981E67CB2BA49E100038A3D6 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 		985349222BAC938F00EAE092 /* lightGrayUniv.colorset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lightGrayUniv.colorset; path = Colors.xcassets/lightGrayUniv.colorset; sourceTree = "<group>"; };
 		985349232BAC938F00EAE092 /* skyBlueUniv.colorset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = skyBlueUniv.colorset; path = Colors.xcassets/skyBlueUniv.colorset; sourceTree = "<group>"; };
 		985349242BAC938F00EAE092 /* grayUniv.colorset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = grayUniv.colorset; path = Colors.xcassets/grayUniv.colorset; sourceTree = "<group>"; };
+		98F656602C269D2800E6AB23 /* ContributionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionView.swift; sourceTree = "<group>"; };
 		ED7F36B02BA17C1B00D32683 /* UNIV-4cut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UNIV-4cut.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7F36B32BA17C1B00D32683 /* UNIV_4cutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNIV_4cutApp.swift; sourceTree = "<group>"; };
 		ED7F36B52BA17C1B00D32683 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 		98027B232BA1A2C4001A8978 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				98F6565E2C269C7F00E6AB23 /* Contribution */,
+				9804DD142C23FB620095F8A8 /* CustomizableFrame */,
 				9823DBE92BA1AAD5007885C4 /* Onboarding */,
 				9823DBE32BA1AA33007885C4 /* TakePhoto */,
 				98027B312BA1A315001A8978 /* Result */,
@@ -256,6 +262,14 @@
 			path = component;
 			sourceTree = "<group>";
 		};
+		9804DD142C23FB620095F8A8 /* CustomizableFrame */ = {
+			isa = PBXGroup;
+			children = (
+				9804DD152C23FB730095F8A8 /* CustomizableFrameView.swift */,
+			);
+			path = CustomizableFrame;
+			sourceTree = "<group>";
+		};
 		981E67CA2BA49DFC0038A3D6 /* Result */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +328,22 @@
 				9823DBEE2BA1ACE4007885C4 /* CameraViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		98F6565E2C269C7F00E6AB23 /* Contribution */ = {
+			isa = PBXGroup;
+			children = (
+				98F6565F2C269D1300E6AB23 /* Views */,
+			);
+			path = Contribution;
+			sourceTree = "<group>";
+		};
+		98F6565F2C269D1300E6AB23 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				98F656602C269D2800E6AB23 /* ContributionView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		ED7F36A72BA17C1B00D32683 = {
@@ -457,7 +487,9 @@
 				981E67B82BA497A10038A3D6 /* ResultViewModel.swift in Sources */,
 				ED7F36B62BA17C1B00D32683 /* ContentView.swift in Sources */,
 				9823DBEC2BA1AAE7007885C4 /* OnboardingView.swift in Sources */,
+				98F656612C269D2800E6AB23 /* ContributionView.swift in Sources */,
 				9823DBEF2BA1ACE4007885C4 /* CameraViewModel.swift in Sources */,
+				9804DD162C23FB730095F8A8 /* CustomizableFrameView.swift in Sources */,
 				9823DBE82BA1AA58007885C4 /* TakePhotoView.swift in Sources */,
 				ED7F36B42BA17C1B00D32683 /* UNIV_4cutApp.swift in Sources */,
 				981E67D02BA4A9550038A3D6 /* Font.swift in Sources */,

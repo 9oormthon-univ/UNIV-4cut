@@ -31,7 +31,7 @@ struct HomeView: View {
     
     // 로고 이미지를 반환하는 함수
     private func logoImage(for width: CGFloat) -> some View {
-        let imageSize: CGFloat = width > 600 ? 400 : 300
+        let imageSize: CGFloat = width > 600 ? 400 : 200
         return Image("logo")
             .resizable()
             .aspectRatio(contentMode: .fit)

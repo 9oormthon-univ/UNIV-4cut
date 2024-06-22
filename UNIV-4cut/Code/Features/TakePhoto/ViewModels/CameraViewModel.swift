@@ -16,7 +16,7 @@ class CameraViewModel: ObservableObject {
         resetTimer() // 기존 타이머를 초기화
         captureCount = 0 // 캡처 횟수 초기화
         capturedImages.removeAll() // 캡처된 이미지 배열 초기화
-        remainingTime = 4 // 초기 남은 시간 설정
+        remainingTime = 6 // 초기 남은 시간 설정
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
             self?.updateTimer() // 타이머 업데이트 함수 호출
         }
@@ -44,7 +44,7 @@ class CameraViewModel: ObservableObject {
     private func handleCapture() {
         if captureCount < 4 {
             captureAction?() // 캡처 실행
-            remainingTime = 4 // 남은 시간 초기화
+            remainingTime = 6 // 남은 시간 초기화
         } else {
             finishCapturing() // 캡처 완료 처리 함수 호출
         }

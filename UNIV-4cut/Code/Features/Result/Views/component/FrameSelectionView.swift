@@ -24,13 +24,13 @@ struct FrameSelectionView: View {
     private func frameColor(for index: Int) -> Color {
         switch index {
         case 0:
-            return .skyBlueUniv
-        case 1:
-            return .mintUniv
-        case 2:
-            return .black
-        case 3:
             return .white
+        case 1:
+            return .black
+        case 2:
+            return .mintUniv
+        case 3:
+            return .skyBlueUniv
         default:
             return .clear
         }
