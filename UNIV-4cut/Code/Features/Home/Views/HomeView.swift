@@ -13,6 +13,13 @@ struct HomeView: View {
                     logoImage(for: geometry.size.width)
                     
                     Spacer()
+                    // 촬영하기 버튼 -> 온보딩 뷰로 이동 : 네비게이션 링크 방식
+                    NavigationLink(destination: ContributionView()) {
+                        Text("기여 해주신 분")
+                            .foregroundColor(.grayUniv)
+                            .cornerRadius(10)
+                    }
+                    .padding()
                     
                     // 촬영하기 버튼 -> 온보딩 뷰로 이동 : 네비게이션 링크 방식
                     NavigationLink(destination: OnboardingView()) {
@@ -23,6 +30,7 @@ struct HomeView: View {
                             .cornerRadius(10)
                     }
                     .padding()
+                    
                 }
             }
             .navigationViewStyle(StackNavigationViewStyle()) // Stack View Style
@@ -31,7 +39,7 @@ struct HomeView: View {
     
     // 로고 이미지를 반환하는 함수
     private func logoImage(for width: CGFloat) -> some View {
-        let imageSize: CGFloat = width > 600 ? 400 : 200
+        let imageSize: CGFloat = width > 600 ? 400 : 300
         return Image("logo")
             .resizable()
             .aspectRatio(contentMode: .fit)
