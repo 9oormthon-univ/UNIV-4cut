@@ -8,18 +8,11 @@
 import SwiftUI
 
 
-struct Contribution: Identifiable {
-    let id = UUID()
-    let instagramID: String
-    let date: String
-    let idea: String
-}
-
-
 struct ContributionView: View {
     @State private var showingTakePhotoView = false
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
+    // 기여자 데이터
     let contributions = [
         Contribution(instagramID: "@jae._._.ha", date: "2024-06-17", idea: "사진 저장하기 아이디어 제공"),
     ]

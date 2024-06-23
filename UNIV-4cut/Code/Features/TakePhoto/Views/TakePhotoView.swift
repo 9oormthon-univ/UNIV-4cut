@@ -3,6 +3,16 @@ import SwiftUI
 struct TakePhotoView: View {
     @StateObject var cameraViewModel = CameraViewModel()
     @State private var isPresentingResultView = false
+    
+    // 추천 포즈 단서 텍스트
+    let RecommantdPoseText = [
+        "이제 하트를 그려볼까요?",
+        "다음은 서로를 보고 웃어봐요!",
+        "팔짱끼고 옆을 볼까요!?",
+        "하하호호!",
+        "찌릿찌릿-!",
+    ]
+    
 
     var body: some View {
         // ToDO : 상단 safeArea제거하기
@@ -20,14 +30,18 @@ struct TakePhotoView: View {
                             .padding(.top, 40)
                         Text("\(cameraViewModel.remainingTime)")
                             .font(.custom("Pretendard-SemiBold", size: 100))
-                            .foregroundColor(.black)
+                            .foregroundColor(.black) 
                     }
                 } else {
                     // 더 극적인 효과가 필요함
                     // 남은 시간이 0인 경우
-                    Text("📸")
-                        .font(.title)
-                        .padding()
+                    VStack{
+                        Text("📸")
+                            .font(.custom("Pretendard-SemiBold", size: 100))
+                        Text(RecommantdPoseText.randomElement() ?? "웃어봐요!")
+                            .font(.custom("Pretendard-SemiBold", size: 30))
+                            .foregroundColor(.black)
+                    }
                 }
                 
                 Spacer() // 상단 여백 생성
@@ -51,7 +65,7 @@ struct TakePhotoView: View {
                     ReusableButton(title: "바로 촬영") {
                         // 즉각 촬영함수
                         cameraViewModel.directCapture()
-                    }   
+                    }
                 }
             }
             .foregroundColor(.white)
