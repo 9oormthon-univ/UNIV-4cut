@@ -5,10 +5,11 @@ struct TakePhotoView: View {
     @State private var isPresentingResultView = false
 
     var body: some View {
+        // ToDO : 상단 safeArea제거하기
         ZStack {
             // 카메라 뷰를 배경으로 설정
             CustomCameraView(viewModel: cameraViewModel)
-            
+            // VStack으로 위에 씌우기
             VStack {
                 // 남은 시간이 0보다 큰 경우
                 if cameraViewModel.remainingTime > 0 {
@@ -22,6 +23,7 @@ struct TakePhotoView: View {
                             .foregroundColor(.black)
                     }
                 } else {
+                    // 더 극적인 효과가 필요함
                     // 남은 시간이 0인 경우
                     Text("📸")
                         .font(.title)
@@ -39,6 +41,18 @@ struct TakePhotoView: View {
                     .background(Color.black.opacity(0.9))
                     .cornerRadius(36)
                     .padding(.bottom, 40) // 상단 Safe Area를 고려한 여백 추가
+                
+                // 버튼 HStack
+                HStack(alignment: .center) {
+                    ReusableButton(title: "5초 지연") {
+                        // 5초 지연 -> remain time + 5sec
+                        cameraViewModel.response5sec()
+                    }
+                    ReusableButton(title: "바로 촬영") {
+                        // 즉각 촬영함수
+                        cameraViewModel.directCapture()
+                    }   
+                }
             }
             .foregroundColor(.white)
         }
