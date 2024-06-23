@@ -10,8 +10,8 @@ struct OnboardingView: View {
     private let titleText = "찍기전에 보고 갈까요?!"
     private let iconTexts: [(iconName: String, text: String)] = [
         ("cloud", "타이머는 6초입니다!"),
-        ("cloud.fill", "촬영 기회는 딱 한번! 예쁘게 찍어봐요!."),
-        ("cloud", "사진 촬영은 총 4번 됩니다."),
+        ("cloud.fill", "촬영 기회는 딱 한 번! 예쁘게 찍어봐요!"),
+        ("cloud", "사진은 총 4번 촬영됩니다!"),
         ("cloud.fill", "촬영하기를 누르면 바로 촬영이 시작돼요!"),
         ("camera", "촬영 완료 후 아래 4가지 프레임 중 1가지를 선택할 수 있어요!")
         ]
@@ -63,16 +63,9 @@ struct OnboardingView: View {
                 }
                 
                 Spacer()
-                
-                // "촬영하기" 버튼
-                Button("촬영하기") {
+                ReusableButton(title: "촬영하기") {
                     showingTakePhotoView = true
-                }
-                .foregroundColor(.white)
-                .frame(width: 200, height: 50)
-                .background(Color.black)
-                .cornerRadius(10)
-                .fullScreenCover(isPresented: $showingTakePhotoView) {
+                }.fullScreenCover(isPresented: $showingTakePhotoView) {
                     TakePhotoView()
                 }
             }

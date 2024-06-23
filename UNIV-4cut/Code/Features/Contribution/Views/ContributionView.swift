@@ -15,6 +15,11 @@ struct ContributionView: View {
     // 기여자 데이터
     let contributions = [
         Contribution(instagramID: "@jae._._.ha", date: "2024-06-17", idea: "사진 저장하기 아이디어 제공"),
+        Contribution(instagramID: "realdouble_s, seongyeon_hong_,jcl003,dodyaaa__,jaemai._.man,pjun_421", date: "2024-06-23", idea: "즉시 촬영버튼 아이디어 제공"),
+        Contribution(instagramID: "pjun_421", date: "2024-06-23", idea: "촬영중 시간 지연 아이디어 제공"),
+        Contribution(instagramID: "taegyeong0225, lj.cuddlyn_p", date: "2024-06-23", idea: "아이패드 가로 모드 제한 수정"),
+        Contribution(instagramID: "1997_rec", date: "2024-06-23", idea: "온보딩-촬영하기 버튼 버그 수정"),
+        Contribution(instagramID: "2000_02_10_", date: "2024-06-24", idea: "온보딩-맞춤법 수정"),
     ]
     
     // 뒤로가기 버튼 뷰
@@ -37,12 +42,14 @@ struct ContributionView: View {
         
         ScrollView {
             VStack {
+        
+                Text("아래 구글폼으로 아이디어를 보내주세요!").padding(
+                )
+//                구글폼 링크 걸기 -> 웹뷰로 열리기
+                Text("반영이 된다면 해당 페이지에 업데이트 됩니다:)")
                 ForEach(contributions) { contribution in
                     ContributionListView(contribution: contribution)
                 }
-                Text("DM으로 아이디어를 보내주세요!").padding(
-                )
-                Text("반영이 된다면 해당 페이지에 업데이트 됩니다:)")
             }
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: backButton)
