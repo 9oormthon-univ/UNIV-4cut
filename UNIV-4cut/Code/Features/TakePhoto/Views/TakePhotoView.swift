@@ -3,22 +3,21 @@ import SwiftUI
 struct TakePhotoView: View {
     @StateObject var cameraViewModel = CameraViewModel()
     @State private var isPresentingResultView = false
-    
-    // 추천 포즈 단서 텍스트
-    let RecommantdPoseText = [
-        "이제 하트를 그려볼까요?",
-        "다음은 서로를 보고 웃어봐요!",
-        "팔짱끼고 옆을 볼까요!?",
-        "하하호호!",
-        "찌릿찌릿-!",
-    ]
-    
+    @State private var showFlash = false
 
     var body: some View {
         // ToDO : 상단 safeArea제거하기
         ZStack {
             // 카메라 뷰를 배경으로 설정
             CustomCameraView(viewModel: cameraViewModel)
+            
+            // 플래쉬 효과
+            if showFlash {
+                Color.white
+                    .opacity(0.8)
+                    .edgesIgnoringSafeArea(.all)
+            }
+            
             // VStack으로 위에 씌우기
             VStack {
                 // 남은 시간이 0보다 큰 경우
@@ -30,19 +29,29 @@ struct TakePhotoView: View {
                             .padding(.top, 40)
                         Text("\(cameraViewModel.remainingTime)")
                             .font(.custom("Pretendard-SemiBold", size: 100))
-                            .foregroundColor(.black) 
-                    }
-                } else {
-                    // 더 극적인 효과가 필요함
-                    // 남은 시간이 0인 경우
-                    VStack{
-                        Text("📸")
-                            .font(.custom("Pretendard-SemiBold", size: 100))
-                        Text(RecommantdPoseText.randomElement() ?? "웃어봐요!")
-                            .font(.custom("Pretendard-SemiBold", size: 30))
                             .foregroundColor(.black)
                     }
+                } else {
+                    // 남은 시간이 0인 경우
+                    VStack{
+                        // 플래쉬 효과를 주기 위한 애니메이션
+                        VStack {
+                            Text("")
+                                .font(.custom("Pretendard-SemiBold", size: 100))
+                        }
+                        .onAppear {
+                            withAnimation(.easeInOut(duration: 0.3)) {
+                                showFlash = true
+                            }
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                withAnimation(.easeInOut(duration: 0.3)) {
+                                    showFlash = false
+                                }
+                            }
+                        }
+                    }
                 }
+                
                 
                 Spacer() // 상단 여백 생성
                 

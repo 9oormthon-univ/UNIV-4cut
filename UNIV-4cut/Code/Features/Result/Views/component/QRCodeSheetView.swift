@@ -18,20 +18,36 @@ struct QRCodeSheetView: View {
                     .scaledToFit()
                     .scaleEffect(0.6)
                 Spacer()
-                Button("홈으로") {
-                    showingQRView = false
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                        showingHomeView = true
+                HStack{
+                    ReusableButton(title: "홈으로") {
+                        showingQRView = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            showingHomeView = true
+                        }
                     }
+                    .fullScreenCover(isPresented: $showingHomeView) {
+                        HomeView()
+                    }
+//                    ReusableButton(title: "앨범 저장",boxWidth:90)                         save
+//                    }
                 }
-                .foregroundColor(.white)
-                .frame(width: 140, height: 50)
-                .background(Color.black)
-                .cornerRadius(10)
-                .padding(.bottom, 30)
-                .fullScreenCover(isPresented: $showingHomeView) {
-                    HomeView()
-                }
+                
+//                Button("홈으로") {
+//                    showingQRView = false
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//                        showingHomeView = true
+//                    }
+//                }
+//                .foregroundColor(.white)
+//                .frame(width: 140, height: 50)
+//                .background(Color.black)
+//                .cornerRadius(10)
+//                .padding(.bottom, 30)
+//                .fullScreenCover(isPresented: $showingHomeView) {
+//                    HomeView()
+//                    
+//                    
+//                }
             }
         } else {
             Text("QR 코드 생성 중...")

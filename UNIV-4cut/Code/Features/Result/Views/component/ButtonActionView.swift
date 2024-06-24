@@ -51,9 +51,8 @@ struct ButtonActionView: View {
             }
         }
     }
-    
     // 이미지 저장
-    private func saveImgInGallery() {
+    public func saveImgInGallery() {
         if let frameImage = UIImage(named: "4cut_\(selectedFrameIndex + 1)") {
             if let frameMergedImage = processor.mergeImage(image: mergedImage, frameImage: frameImage) {
                 viewModel.saveImageToAlbum(image: frameMergedImage) { success, error in
@@ -78,6 +77,7 @@ struct ButtonActionView: View {
         }
     }
 }
+
 
 struct ButtonActionView_Previews: PreviewProvider {
     static var previews: some View {

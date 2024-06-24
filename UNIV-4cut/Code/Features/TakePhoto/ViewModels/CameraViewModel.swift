@@ -3,7 +3,7 @@ import AVFoundation
 
 class CameraViewModel: ObservableObject {
     @Published var capturedImages: [UIImage] = [] // 캡처된 이미지를 저장하는 배열
-    @Published var remainingTime = 100 // 남은 시간을 나타내는 변수
+    @Published var remainingTime = 6 // 남은 시간을 나타내는 변수
     @Published var mergedImage: UIImage? = nil // 병합된 이미지를 저장하는 변수
     @Published var count = 0 // 캡처 시도 횟수를 저장하는 변수
 
@@ -16,7 +16,7 @@ class CameraViewModel: ObservableObject {
         resetTimer() // 기존 타이머를 초기화
         captureCount = 0 // 캡처 횟수 초기화
         capturedImages.removeAll() // 캡처된 이미지 배열 초기화
-        remainingTime = 100 // 초기 남은 시간 설정
+        remainingTime = 6 // 초기 남은 시간 설정
         // 매초 시간 체크
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
             self?.updateTimer() // 타이머 업데이트 함수 호출
@@ -51,16 +51,14 @@ class CameraViewModel: ObservableObject {
     // 즉각 촬영
     func directCapture(){
         // 남은 시간 0초로 초기화
-        remainingTime = 0
-        // 사진 촬영 진행
-        handleCapture()
+        remainingTime = 1
     }
 
     // 캡처 처리 함수
     private func handleCapture() {
         if captureCount < 4 {
             captureAction?() // 캡처 실행
-            remainingTime = 100 // 남은 시간 초기화
+            remainingTime = 6 // 남은 시간 초기화
         } else {
             finishCapturing() // 캡처 완료 처리 함수 호출
         }
